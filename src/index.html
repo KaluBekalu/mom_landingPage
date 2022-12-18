@@ -29,11 +29,11 @@
 
     <title>MINTEX</title>
   </head>
-  <body>
-    <div class="flex bg-gray-900 text-white">
+  <body class="bg-gray-900">
+    <div class="flex container bg-gray-900 text-white">
       <!-- right side static -->
       <div
-        class="h-screen p-5 w-[10px] bg-[#50d71e] flex flex-col items-center justify-between pb-20"
+        class="hidden h-screen p-5 w-[10px] bg-[#50d71e] flex flex-col items-center justify-between pb-20"
       >
         <img src="../assets/momlogo.png" class="w-40" />
         <div class="social-icons">
@@ -45,37 +45,48 @@
       </div>
       <!-- Middle scrollable section -->
       <div
-        class="content scrollbar-hidden h-screen flex-1 overflow-y-scroll p-10 grid grid-cols-1 gap-40"
+        class="content scrollbar-hidden h-screen flex-1 overflow-y-scroll p-10 grid grid-cols-1 gap-10 gap-y-20"
       >
         <!-- Hero section -->
-        <div class="hero p-10 mt-20 grid grid-cols-2 gap-4 items-center">
-          <div class="flex flex-col items-start gap-4">
+        <div
+          class="hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
+        >
+          <div
+            class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+          >
             <h3 class="uppercase text-2xl hero-date flex items-center gap-4">
-              <p class="hero-date-line"></p>
+              <p class="hidden md:block hero-date-line"></p>
               November 8 - 10
             </h3>
-            <h1 class="uppercase hero-text gradient-text">
-              Mining and Texchnology Expo
+            <h1
+              class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+            >
+              Mining and Technology Expo
             </h1>
-            <button class="btn">Reserve a Booth</button>
           </div>
-          <div class="flex justify-center">
+          <div class="flex order-1 md:order-2 justify-center md:justify-end">
             <img src="../assets/momlogo.png" class="self-center hero-image" />
+          </div>
+          <div class="col-span-2 md:order-3 order-3">
+            <button class="btn">Reserve a Booth</button>
           </div>
         </div>
 
         <!-- Mintex is coming -->
         <div class="mt-10">
           <h2
-            class="uppercase mintex-is-coming gradient-text flex flex-col items-center"
+            class="uppercase header-title gradient-text flex flex-col items-center"
           >
             MINTEX IS COMING
             <p class="hor-line"></p>
           </h2>
+
           <div>
-            <div class="grid grid-cols-3 items-center gap-x-40 justify-between">
+            <div
+              class="flex flex-col lg:grid grid-cols-3 gap-x-40 justify-between"
+            >
               <!-- Countdown -->
-              <div id="time-container" class="col-span-2">
+              <div id="time-container" class="col-span-2 gap-5">
                 <!-- Days -->
                 <div class="time day">
                   <p id="day">
@@ -93,10 +104,13 @@
                 </div>
               </div>
               <div class="col-span-1">
-                <h3 class="text-5xl tracking-widest" style="font-weight: 200">
+                <h3
+                  class="header-subtitle tracking-widest"
+                  style="font-weight: 200"
+                >
                   LAUNCH
                 </h3>
-                <p style="font-weight: 100" class="text-xl my-5">
+                <p style="font-weight: 100" class="paragraph my-5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Laboriosam recusandae sed aperiam corrupti reiciendis aut
                   incidunt culpa possimus, temporibus, odio cum facere molestias
@@ -107,7 +121,7 @@
                 </button>
               </div>
               <div
-                class="uppercase text-2xl flex gap-10"
+                class="uppercase header-paragraph mt-5 flex gap-10"
                 style="font-weight: 300"
               >
                 <p>
@@ -126,15 +140,15 @@
         <!-- About Mintex -->
         <div>
           <h2
-            class="uppercase mintex-is-coming gradient-text flex flex-col items-center"
+            class="uppercase header-title gradient-text flex flex-col items-center"
           >
             ABOUT MINTEX
             <p class="hor-line"></p>
           </h2>
 
-          <div class="grid grid-cols-2">
-            <div class="my-40">
-              <div class="relative" style="width: 500px">
+          <div class="flex flex-col md:grid grid-cols-2">
+            <div class="my-5 flex justify-center md:justify-start md:my-40">
+              <div class="relative">
                 <div id="play-pause" class="play-pause">
                   <div id="play" class="cursor-pointer video-controls">
                     <i class="fa-sharp fa-solid fa-play"></i>
@@ -156,10 +170,7 @@
               </div>
             </div>
             <div class="col-span-1 m-auto">
-              <div
-                class="overflow-y-scroll scrollbar-hidden"
-                style="height: 400px"
-              >
+              <div class="about-scrollable overflow-y-scroll scrollbar-hidden">
                 <h3 class="font-bold mb-20 about-text">
                   The Worlds largest mining event
                 </h3>
@@ -173,7 +184,7 @@
                   Worlds largest mining event
                 </h3>
               </div>
-              <p class="text-xl about-excerpt">
+              <p class="paragraph about-excerpt">
                 MINTEX is aiming to be Africa’s largest and most prominent
                 mining event, embracing the whole value chain of survey and
                 assessment, exploration and mining, technology and equipment,
@@ -187,15 +198,16 @@
         <!-- JOIN US -->
         <div>
           <h3
-            class="uppercase flex items-center text-6xl w-full"
-            style="font-size: 90px"
+            class="uppercase flex flex-col md:flex-row items-center header-title w-full"
           >
             Join Us
-            <p class="ml-10 hor-line flex-grow"></p>
+            <p class="md:ml-10 hor-line flex-grow"></p>
           </h3>
-          <div class="grid grid-cols-2 py-20 items-center">
+          <div class="grid grid-cols-1 md:grid-cols-2 py-20 items-center">
             <div>
-              <div class="grid grid-cols-2 grid-rows-2 join-us-card">
+              <div
+                class="grid grid-cols-2 mx-auto mb-5 grid-rows-2 join-us-card"
+              >
                 <div class="card-box">
                   <h3>150</h3>
                   <span>EXHIBITORS</span>
@@ -214,11 +226,11 @@
                 </div>
               </div>
             </div>
-            <div>
-              <h3 class="text-6xl font-thin">
+            <div class="">
+              <h3 class="header-subtitle font-thin">
                 WHO IS COMING TO THIS YEAR'S MINTEX?
               </h3>
-              <p class="text-xl font-thin my-5">
+              <p class="paragraph font-thin my-5">
                 MINTEX is aiming to be Africa’s largest and most prominent
                 mining event, embracing the whole value chain of survey and
                 assessment, exploration and mining, technology and equipment,
@@ -237,7 +249,7 @@
         <!-- TIMELINE -->
         <div class="">
           <h2
-            class="uppercase mintex-is-coming gradient-text flex flex-col items-center mb-20"
+            class="uppercase header-title gradient-text flex flex-col items-center mb-20"
           >
             Program Schedule
             <p class="hor-line"></p>
@@ -246,9 +258,9 @@
             <!-- TimeLine 1 -->
             <div class="flex justify-evenly time-line-card-container">
               <!-- CARD -->
-              <div class="time-line-card mt-20" style="width: 49%">
-                <p class="time-line-time text-5xl">9:00 - 12:00</p>
-                <p class="time-line-date font-bold text-3xl">12 Nov 2022</p>
+              <div class="time-line-card mt-10" style="width: 49%">
+                <p class="time-line-time">9:00 - 12:00</p>
+                <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
                   src="../assets/images/Takele.jpg"
@@ -274,8 +286,8 @@
                 class="time-line-card mt-20"
                 style="width: 49%; align-items: start"
               >
-                <p class="time-line-time text-5xl">9:00 - 12:00</p>
-                <p class="time-line-date font-bold text-3xl">12 Nov 2022</p>
+                <p class="time-line-time">9:00 - 12:00</p>
+                <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
                   src="../assets/images/Takele.jpg"
@@ -295,9 +307,9 @@
             <!-- TimeLine 3 -->
             <div class="flex justify-evenly time-line-card-container">
               <!-- CARD -->
-              <div class="time-line-card mt-20" style="width: 49%">
-                <p class="time-line-time text-5xl">9:00 - 12:00</p>
-                <p class="time-line-date font-bold text-3xl">12 Nov 2022</p>
+              <div class="time-line-card mt-10" style="width: 49%">
+                <p class="time-line-time">9:00 - 12:00</p>
+                <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
                   src="../assets/images/Takele.jpg"
@@ -323,8 +335,8 @@
                 class="time-line-card mt-20"
                 style="width: 49%; align-items: start"
               >
-                <p class="time-line-time text-5xl">9:00 - 12:00</p>
-                <p class="time-line-date font-bold text-3xl">12 Nov 2022</p>
+                <p class="time-line-time">9:00 - 12:00</p>
+                <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
                   src="../assets/images/Takele.jpg"
@@ -334,7 +346,7 @@
               <!-- LINE -->
               <div class="flex flex-col items-center">
                 <div class="circle"></div>
-                <!-- <div class="line"></div> -->
+                <div class="line"></div>
               </div>
               <!-- TEXT -->
               <div class="flex items-center justify-end" style="width: 49%">
@@ -346,18 +358,15 @@
         <!-- SPONSORS -->
         <div class="flex flex-col">
           <h2
-            class="uppercase mintex-is-coming gradient-text flex flex-col items-center"
+            class="uppercase header-title gradient-text flex flex-col items-center"
           >
             SPONSORS
             <p class="hor-line"></p>
           </h2>
-          <p class="uppercase mt-20 text-5xl text-center">
+          <p class="uppercase my-5 header-subtitle text-center">
             Proudly partnerd with
           </p>
-          <p
-            class="text-2xl text-center mb-20 font-thin self-center"
-            style="width: 70%"
-          >
+          <p class="paragraph md:text-center mb-20 font-thin self-center">
             Working alongside Our clients and partners, we funnel our
             creativity, energy, and thought to every brand that will reflect our
             mulutal success. Working alongside Our clients and partners, we
@@ -380,6 +389,7 @@
             <img src="../assets/icons/dropbox.png" alt="" />
           </div>
         </div>
+
         <footer class="footer">
           <img src="../assets/images/footer-img.png" alt="" />
           <div class="overlay">
@@ -389,7 +399,9 @@
         </footer>
       </div>
       <!-- left side menu -->
-      <div class="h-screen py-3 px-5 gap-5 pb-40 flex justify-between flex-col">
+      <div
+        class="hidden h-screen py-3 px-5 gap-5 pb-40 md:flex justify-between flex-col"
+      >
         <div id="menu" class="menu">
           <p id="menu-item-1" class=""></p>
           <p id="menu-item-2"></p>

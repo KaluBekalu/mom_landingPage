@@ -2,6 +2,11 @@ body {
   font-family: Poppins;
 }
 
+.container {
+  max-width: 1920px;
+  margin: auto;
+}
+
 .social-icons {
   display: flex;
   flex-direction: column;
@@ -38,7 +43,7 @@ body {
 .menu > p {
   background-color: #fff;
   width: 50px;
-  height: 5px;
+  height: 3px;
   transition: all 0.5s ease-in;
 }
 
@@ -61,17 +66,16 @@ body {
   padding-block: 5px;
   padding-inline: 20px;
   border: 1px solid #e3b97a;
-  /* border-radius: 5px; */
-  font-size: 25px;
+  font-size: clamp(11px, 4vw, 25px);
   color: #e3b97a;
 }
-.btn::hover {
+.btn:hover {
   border: 1px solid #857152;
   color: #857152;
 }
 
 .hero-text {
-  font-size: 90px;
+  font-size: clamp(30px, 5vw, 90px);
   font-family: serif;
   font-weight: bold;
 }
@@ -83,7 +87,7 @@ body {
 }
 
 .hero-image {
-  width: 600px;
+  width: clamp(200px, 60%, 600px);
 }
 
 .hero-date-line {
@@ -92,10 +96,18 @@ body {
   background: white;
 }
 
-.mintex-is-coming {
-  font-size: 150px;
-  font-weight: 100;
+.header-title {
+  font-size: clamp(30px, 9vw, 80px);
+  font-weight: 200;
   text-align: center;
+}
+
+.header-subtitle {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
+.paragraph {
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 .hor-line {
@@ -108,15 +120,15 @@ body {
 #time-container {
   display: flex;
   justify-content: space-between;
-  margin-block: 150px;
+  margin-block: clamp(20px, 3vw, 150px);
 }
 
 .rotated-mintex {
 }
 
 .time {
-  width: 250px;
-  height: 250px;
+  width: clamp(100px, 15vw, 250px);
+  height: clamp(100px, 15vw, 250px);
   border-radius: 1000px;
   display: flex;
   align-items: center;
@@ -125,20 +137,20 @@ body {
 }
 
 .time > p {
-  font-size: 40px;
+  font-size: clamp(15px, 6vw, 40px);
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 .time > p > span {
-  font-size: 25px;
+  font-size: clamp(12px, 2.5vw, 25px);
   font-weight: 200;
 }
 
 .video {
   object-fit: cover;
-  width: 500px;
-  height: 500px;
+  width: clamp(250px, 30vw, 500px);
+  height: clamp(250px, 30vw, 500px);
   border-radius: 100%;
   box-shadow: 0px 10px 15px -3px #e3b97a40;
 }
@@ -149,11 +161,18 @@ body {
 }
 
 .about-text {
-  font-size: 110px;
   font-weight: bold;
   line-height: 1;
   color: #e3b97a;
+  text-align: left;
   text-transform: uppercase;
+  font-size: clamp(30px, 6vw, 80px);
+}
+
+.about-scrollable {
+  margin-block: 20px;
+  height: clamp(100px, 10vw, 500px);
+  /* height: 25%; */
 }
 
 .about-excerpt {
@@ -165,7 +184,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 100px;
+  font-size: 50px;
   position: absolute;
   z-index: 20;
   width: 100%;
@@ -199,11 +218,11 @@ body {
   border-right: 1px solid white;
 }
 .card-box > h3 {
-  font-size: 70px;
+  font-size: clamp(20px, 3vw, 70px);
   font-weight: bold;
 }
 .card-box > span {
-  font-size: 30px;
+  font-size: clamp(15px, 3vw, 30px);
 }
 .footer {
   position: relative;
@@ -223,54 +242,10 @@ body {
   font-weight: 300;
   flex-direction: column;
   text-align: center;
-  font-size: 100px;
+  font-size: clamp(1rem, 4vw, 100px);
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Count down */
-#countdown {
-  position: relative;
-  margin: auto;
-  margin-top: 100px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-}
-
-#countdown-number {
-  color: white;
-  display: inline-block;
-  line-height: 40px;
-}
-
-svg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 250px;
-  transform: rotateY(-180deg) rotateZ(-90deg);
-}
-
-svg circle {
-  stroke-dasharray: 113px;
-  stroke-dashoffset: 0px;
-  stroke-linecap: round;
-  stroke-width: 2px;
-  stroke: white;
-  fill: none;
-  animation: countdown 10s linear infinite forwards;
-}
-
-@keyframes countdown {
-  from {
-    stroke-dashoffset: 0px;
-  }
-  to {
-    stroke-dashoffset: 113px;
-  }
 }
 
 /* time-line */
@@ -283,14 +258,14 @@ svg circle {
   align-items: center;
 }
 .line {
-  width: 5px;
+  width: 1px;
   flex-grow: 1;
   background-color: white;
 }
 
 .circle {
-  width: 50px;
-  height: 50px;
+  width: clamp(20px, 4vw, 50px);
+  height: clamp(20px, 4vw, 50px);
   border-radius: 100px;
   background-color: white;
 }
@@ -300,14 +275,19 @@ svg circle {
   flex-direction: column;
   align-items: end;
 }
-
+.time-line-time {
+  font-size: (1em, 3vw, 1.7rem);
+}
+.time-line-date {
+}
 .time-line-mintex {
-  font-size: 140px;
+  /* font-size: 140px; */
+  font-size: clamp(30px, 3vw, 140px);
   font-weight: 100;
-  letter-spacing: 60px;
+  letter-spacing: clamp(10px, 1vw, 60px);
 }
 .time-line-card-image {
-  width: 50%;
+  width: clamp(200px, 50vw, 400px);
   object-fit: cover;
   border-radius: 20px;
   aspect-ratio: 12/19;
