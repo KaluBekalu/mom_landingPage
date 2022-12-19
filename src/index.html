@@ -26,7 +26,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="./style.css" />
 
     <title>MINTEX</title>
@@ -65,21 +64,51 @@
               <!-- Countdown -->
               <div id="time-container" class="col-span-2 gap-5">
                 <!-- Days -->
-                <div class="time day">
-                  <p id="day"></p>
-                  <span>DAYS</span>
+                <!-- <div class="progressbar center">
+                  <div class="half-circle"></div>
+                  <div class="half-circle"></div>
+                  <div class="half-circle-top"></div>
+                  <div class="progressbar-circle center">0%</div>
+                </div> -->
+                <div class="time day relative overflow-hidden bg-white">
+                  <div class="half-circle day-half-circle"></div>
+                  <div class="half-circle day-half-circle"></div>
+                  <div class="half-circle-top day-half-circle-top"></div>
+                  <div class="z-10 bg-gray-900 inner-circle">
+                    <p id="day"></p>
+                    <span>DAYS</span>
+                  </div>
+                </div>
+                <div class="time day relative overflow-hidden bg-white">
+                  <div class="half-circle hour-half-circle"></div>
+                  <div class="half-circle hour-half-circle"></div>
+                  <div class="half-circle-top hour-half-circle-top"></div>
+                  <div class="z-10 bg-gray-900 inner-circle">
+                    <p id="hour"></p>
+                    <span>Hours</span>
+                  </div>
+                </div>
+                <div class="time day relative overflow-hidden bg-white">
+                  <div class="half-circle minute-half-circle"></div>
+                  <div class="half-circle minute-half-circle"></div>
+                  <div class="half-circle-top minute-half-circle-top"></div>
+                  <div class="z-10 bg-gray-900 inner-circle">
+                    <p id="minute"></p>
+
+                    <span>Minutes</span>
+                    <div><span class="text-sx" id="sec">0</span>s</div>
+                  </div>
                 </div>
                 <!-- Hour -->
-                <div class="time hour">
+                <!-- <div class="time hour">
                   <p id="hour"></p>
                   <span>Hours</span>
-                </div>
+                </div> -->
                 <!-- Minutes -->
-                <div class="time minute relativ">
+                <!-- <div class="time minute relativ">
                   <p id="minute"></p>
                   <span>Minutes </span>
-                  <span class="text-sx" id="sec">0</span>
-                </div>
+                </div> -->
               </div>
               <div class="col-span-2">
                 <h3
@@ -404,94 +433,17 @@
         </div>
 
         <div class="flex-1 flex-col flex items-center">
-          <p class="w-1 bg-white flex-1 my-3"></p>
+          <p class="bg-white flex-1 my-3" style="width: 1px"></p>
           <p class="scroll-down my-5">scroll</p>
-          <p class="w-1 bg-white flex-1 flex items-end justify-center">
-            <i class="fa-solid fa-arrow-down text-white mt-[20px]"></i>
+          <p
+            class="bg-white flex-1 gap-0 flex items-end justify-center"
+            style="width: 1px"
+          >
+            <i class="fa-solid fa-arrow-down text-white bg-gray-900"></i>
           </p>
         </div>
       </div>
     </div>
   </body>
-
-  <script>
-    const video = document.getElementById("video");
-    const videoHandle = document.getElementById("play-pause");
-    const play = document.getElementById("play");
-    const pause = document.getElementById("pause");
-
-    videoHandle.addEventListener("click", () => {
-      console.log("first");
-      if (video.paused) {
-        video.play();
-        play.classList.add("hidden");
-        pause.classList.remove("hidden");
-      } else {
-        play.classList.remove("hidden");
-        pause.classList.add("hidden");
-        video.pause();
-      }
-    });
-
-    const menu = document.getElementById("menu");
-    const item1 = document.getElementById("menu-item-1");
-    const item2 = document.getElementById("menu-item-2");
-    const item3 = document.getElementById("menu-item-3");
-
-    menu.addEventListener("click", () => {
-      if (menu.classList.contains("open")) {
-        menu.classList.remove("open");
-        item2.classList.remove("menu-open-item-2");
-        item3.classList.remove("menu-open-item-3");
-        setTimeout(() => {
-          item1.classList.remove("hidden");
-        }, 500);
-      } else {
-        menu.classList.add("open");
-        item2.classList.add("menu-open-item-2");
-        item3.classList.add("menu-open-item-3");
-        item1.classList.add("hidden");
-        setTimeout(() => {}, 500);
-      }
-    });
-    // CountDown
-    const dayEl = document.getElementById("day");
-    const hourEl = document.getElementById("hour");
-    const minuteEl = document.getElementById("minute");
-    const secEl = document.getElementById("sec");
-
-    const startCountDown = () => {
-      var countDownDate = new Date("Apr 1, 2024").getTime();
-
-      var interval = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        //Update the dom
-        dayEl.innerText = days;
-        hourEl.innerText = hours;
-        minuteEl.innerText = minutes;
-        secEl.innerText = seconds;
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(interval);
-          dayEl.innerText = "0";
-          hourEl.innerText = "0";
-          minuteEl.innerText = "0";
-          secEl.innerText = "0";
-        }
-      }, 1000);
-    };
-
-    startCountDown();
-  </script>
+  <script src="./index.js"></script>
 </html>

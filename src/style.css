@@ -26,11 +26,12 @@ body {
 }
 .menu-open-item-3 {
   transition: all 0.5s ease-in;
-  transform: translate(0, -25px) rotate(-45deg);
+  transform: translate(0, -23px) rotate(-45deg);
 }
 
 .menu {
-  height: 30px;
+  height: 25px;
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,8 +43,8 @@ body {
 
 .menu > p {
   background-color: #fff;
-  width: 50px;
-  height: 3px;
+  width: 30px;
+  height: 2px;
   transition: all 0.5s ease-in;
 }
 
@@ -140,13 +141,79 @@ body {
   flex-direction: column;
 }
 
-.time > p {
+/*  */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressbar {
+  width: clamp(101px, 15.5vw, 401px);
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.half-circle,
+.half-circle-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  transform-origin: right center;
+}
+
+.half-circle:nth-child(1) {
+  background-color: #b60000;
+}
+
+.half-circle:nth-child(2) {
+  background-color: #b60000;
+}
+
+.half-circle-top {
+  background-color: #fff;
+}
+
+.inner-circle {
+  width: clamp(95px, 14vw, 395px);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.progressbar-circle {
+  /* width: 39.4rem; */
+  /* height: 39.4rem; */
+  width: clamp(100px, 15vw, 400px);
+  aspect-ratio: 1/1;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 4rem;
+  z-index: 10;
+}
+/*  */
+.time > p,
+.inner-circle > p {
   font-size: clamp(15px, 6vw, 35px);
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.time > p > span {
+.time > p > span,
+.inner-circle > p > span {
   font-size: clamp(12px, 2.5vw, 20px);
   font-weight: 200;
 }
@@ -295,7 +362,8 @@ body {
 .time-line-mintex {
   /* font-size: 140px; */
   /* font-size: clamp(30px, 3vw, 140px); */
-  font-size: clamp(15px, 3vw, 140px);
+  font-size: clamp(15px, 3.4vw, 200px);
+  opacity: 0.5;
   font-weight: 100;
   letter-spacing: clamp(15px, 2vw, 60px);
 }
