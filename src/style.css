@@ -137,6 +137,7 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid #757575;
+  flex-direction: column;
 }
 
 .time > p {

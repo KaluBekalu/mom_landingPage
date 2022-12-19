@@ -9,6 +9,8 @@
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,35 +49,10 @@
       <div
         class="content scrollbar-hidden h-screen flex-1 overflow-y-scroll p-10 grid grid-cols-1 gap-10 gap-y-20"
       >
-        <!-- Hero section -->
-        <div
-          class="hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-        >
-          <div
-            class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
-          >
-            <h3 class="uppercase hero-date flex items-center gap-4">
-              <p class="hidden md:block hero-date-line"></p>
-              November 8 - 10
-            </h3>
-            <h1
-              class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
-            >
-              Mining and Technology Expo
-            </h1>
-            <div class="col-span-2 md:order-3 order-3">
-              <button class="btn">Reserve a Booth</button>
-            </div>
-          </div>
-          <div class="flex order-1 md:order-2 justify-center md:justify-end">
-            <img src="../assets/momlogo.png" class="self-center hero-image" />
-          </div>
-        </div>
-
         <!-- Mintex is coming -->
         <div class="mt-10">
           <h2
-            class="uppercase header-title gradient-text flex flex-col items-center"
+            class="uppercase header-title gradient-text flex flex-col items-center mb-10"
           >
             MINTEX IS COMING
             <p class="hor-line"></p>
@@ -89,18 +66,19 @@
               <div id="time-container" class="col-span-2 gap-5">
                 <!-- Days -->
                 <div class="time day">
-                  <p id="day">
-                    285
-                    <span>DAYS</span>
-                  </p>
+                  <p id="day"></p>
+                  <span>DAYS</span>
                 </div>
-                <!-- Hours -->
+                <!-- Hour -->
                 <div class="time hour">
-                  <p id="hour">11 <span>HOURS</span></p>
+                  <p id="hour"></p>
+                  <span>Hours</span>
                 </div>
                 <!-- Minutes -->
-                <div class="time minute">
-                  <p id="minute">51 <span>MINUTES</span></p>
+                <div class="time minute relativ">
+                  <p id="minute"></p>
+                  <span>Minutes </span>
+                  <span class="text-sx" id="sec">0</span>
                 </div>
               </div>
               <div class="col-span-2">
@@ -476,5 +454,44 @@
         setTimeout(() => {}, 500);
       }
     });
+    // CountDown
+    const dayEl = document.getElementById("day");
+    const hourEl = document.getElementById("hour");
+    const minuteEl = document.getElementById("minute");
+    const secEl = document.getElementById("sec");
+
+    const startCountDown = () => {
+      var countDownDate = new Date("Apr 1, 2024").getTime();
+
+      var interval = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        //Update the dom
+        dayEl.innerText = days;
+        hourEl.innerText = hours;
+        minuteEl.innerText = minutes;
+        secEl.innerText = seconds;
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(interval);
+          dayEl.innerText = "0";
+          hourEl.innerText = "0";
+          minuteEl.innerText = "0";
+          secEl.innerText = "0";
+        }
+      }, 1000);
+    };
+
+    startCountDown();
   </script>
 </html>
