@@ -66,7 +66,9 @@ body {
   padding-block: 5px;
   padding-inline: 20px;
   border: 1px solid #e3b97a;
-  font-size: clamp(11px, 4vw, 25px);
+  /* font-size: clamp(11px, 3vw, 29px); */
+  font-size: clamp(11px, 2vw, 29px);
+
   color: #e3b97a;
 }
 .btn:hover {
@@ -87,7 +89,7 @@ body {
 }
 
 .hero-image {
-  width: clamp(200px, 60%, 600px);
+  width: clamp(200px, 60%, 700px);
 }
 
 .hero-date-line {
@@ -97,7 +99,7 @@ body {
 }
 
 .header-title {
-  font-size: clamp(30px, 9vw, 80px);
+  font-size: clamp(30px, 5vw, 80px);
   font-weight: 200;
   text-align: center;
 }
@@ -127,8 +129,9 @@ body {
 }
 
 .time {
-  width: clamp(100px, 15vw, 250px);
-  height: clamp(100px, 15vw, 250px);
+  width: clamp(100px, 15vw, 400px);
+  /* height: clamp(100px, 15vw, 250px); */
+  aspect-ratio: 1/1;
   border-radius: 1000px;
   display: flex;
   align-items: center;
@@ -137,20 +140,21 @@ body {
 }
 
 .time > p {
-  font-size: clamp(15px, 6vw, 40px);
+  font-size: clamp(15px, 6vw, 35px);
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 .time > p > span {
-  font-size: clamp(12px, 2.5vw, 25px);
+  font-size: clamp(12px, 2.5vw, 20px);
   font-weight: 200;
 }
 
 .video {
   object-fit: cover;
   width: clamp(250px, 30vw, 500px);
-  height: clamp(250px, 30vw, 500px);
+  /* height: clamp(250px, 30vw, 500px); */
+  aspect-ratio: 1/1;
   border-radius: 100%;
   box-shadow: 0px 10px 15px -3px #e3b97a40;
 }
@@ -166,7 +170,8 @@ body {
   color: #e3b97a;
   text-align: left;
   text-transform: uppercase;
-  font-size: clamp(30px, 6vw, 80px);
+  /* font-size: clamp(30px, 6vw, 80px); */
+  font-size: clamp(30px, 3.5vw, 80px) !important;
 }
 
 .about-scrollable {
@@ -176,7 +181,7 @@ body {
 }
 
 .about-excerpt {
-  width: 80%;
+  /* width: 80%; */
   font-weight: 100;
 }
 
@@ -197,6 +202,7 @@ body {
 
 .join-us-card {
   background: #7c6f63;
+  /* max-width: 25vw; */
   max-width: 60%;
   aspect-ratio: 1/1;
   border-radius: 30px;
@@ -218,11 +224,11 @@ body {
   border-right: 1px solid white;
 }
 .card-box > h3 {
-  font-size: clamp(20px, 3vw, 70px);
+  font-size: clamp(20px, 3vw, 200px);
   font-weight: bold;
 }
 .card-box > span {
-  font-size: clamp(15px, 3vw, 30px);
+  font-size: clamp(15px, 1vw, 30px);
 }
 .footer {
   position: relative;
@@ -276,18 +282,25 @@ body {
   align-items: end;
 }
 .time-line-time {
-  font-size: (1em, 3vw, 1.7rem);
+  font-size: clamp(1em, 3vw, 48px);
 }
 .time-line-date {
+  font-size: clamp(1em, 3vw, 32px);
+}
+.time-line-image-header {
+  font-weight: bold;
+  font-size: clamp(1em, 3vw, 36px);
 }
 .time-line-mintex {
   /* font-size: 140px; */
-  font-size: clamp(30px, 3vw, 140px);
+  /* font-size: clamp(30px, 3vw, 140px); */
+  font-size: clamp(15px, 3vw, 140px);
   font-weight: 100;
-  letter-spacing: clamp(10px, 1vw, 60px);
+  letter-spacing: clamp(15px, 2vw, 60px);
 }
 .time-line-card-image {
-  width: clamp(200px, 50vw, 400px);
+  width: clamp(50px, 30vw, 400px);
+  aspect-ratio: 1/1 !important;
   object-fit: cover;
   border-radius: 20px;
   aspect-ratio: 12/19;

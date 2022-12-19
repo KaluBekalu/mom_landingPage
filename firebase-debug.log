@@ -1,0 +1,168 @@
+[debug] [2022-12-18T19:39:23.510Z] ----------------------------------------------------------------------
+[debug] [2022-12-18T19:39:23.513Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2022-12-18T19:39:23.514Z] CLI Version:   11.16.1
+[debug] [2022-12-18T19:39:23.514Z] Platform:      linux
+[debug] [2022-12-18T19:39:23.514Z] Node Version:  v18.12.1
+[debug] [2022-12-18T19:39:23.514Z] Time:          Sun Dec 18 2022 22:39:23 GMT+0300 (East Africa Time)
+[debug] [2022-12-18T19:39:23.514Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-18T19:39:23.518Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-12-18T19:39:23.564Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-18T19:39:23.564Z] > authorizing via signed-in user (kalkidan@360ground.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/kalkidan/Desktop/me/MoM
+
+[debug] [2022-12-18T19:39:36.578Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-12-18T19:39:36.579Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-12-18T19:40:17.147Z] Error: setRawMode EIO
+    at ReadStream.setRawMode (node:tty:77:31)
+    at [_setRawMode] [as _setRawMode] (node:internal/readline/interface:383:18)
+    at Interface.close (node:internal/readline/interface:533:24)
+    at ReadStream.ontermend (node:internal/readline/interface:269:10)
+    at ReadStream.emit (node:events:525:35)
+    at ReadStream.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.153Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.155Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.158Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.159Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.162Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.163Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-12-18T19:40:17.165Z] Error: write EIO
+    at afterWriteDispatched (node:internal/stream_base_commons:160:15)
+    at writeGeneric (node:internal/stream_base_commons:151:3)
+    at Socket._writeGeneric (node:net:917:11)
+    at Socket._write (node:net:929:8)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at Writable.write (node:internal/streams/writable:337:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (node:events:525:35)
+    at DerivedLogger.emit (node:domain:489:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+[error] 
+[error] Error: An unexpected error has occurred.

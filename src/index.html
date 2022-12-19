@@ -33,9 +33,9 @@
     <div class="flex container bg-gray-900 text-white">
       <!-- right side static -->
       <div
-        class="hidden h-screen p-5 w-[10px] bg-[#50d71e] flex flex-col items-center justify-between pb-20"
+        class="hidden h-screen p-5 bg-[#50d71e] md:flex flex-col items-center justify-between pb-20"
       >
-        <img src="../assets/momlogo.png" class="w-40" />
+        <img src="../assets/momlogo.png" class="w-20" />
         <div class="social-icons">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-instagram"></i>
@@ -54,7 +54,7 @@
           <div
             class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
           >
-            <h3 class="uppercase text-2xl hero-date flex items-center gap-4">
+            <h3 class="uppercase hero-date flex items-center gap-4">
               <p class="hidden md:block hero-date-line"></p>
               November 8 - 10
             </h3>
@@ -63,12 +63,12 @@
             >
               Mining and Technology Expo
             </h1>
+            <div class="col-span-2 md:order-3 order-3">
+              <button class="btn">Reserve a Booth</button>
+            </div>
           </div>
           <div class="flex order-1 md:order-2 justify-center md:justify-end">
             <img src="../assets/momlogo.png" class="self-center hero-image" />
-          </div>
-          <div class="col-span-2 md:order-3 order-3">
-            <button class="btn">Reserve a Booth</button>
           </div>
         </div>
 
@@ -81,9 +81,9 @@
             <p class="hor-line"></p>
           </h2>
 
-          <div>
+          <div class="relative">
             <div
-              class="flex flex-col lg:grid grid-cols-3 gap-x-40 justify-between"
+              class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center"
             >
               <!-- Countdown -->
               <div id="time-container" class="col-span-2 gap-5">
@@ -103,7 +103,7 @@
                   <p id="minute">51 <span>MINUTES</span></p>
                 </div>
               </div>
-              <div class="col-span-1">
+              <div class="col-span-2">
                 <h3
                   class="header-subtitle tracking-widest"
                   style="font-weight: 200"
@@ -120,8 +120,19 @@
                   Reserve a Booth
                 </button>
               </div>
+              <h3
+                class="hidden time-line-mintex absolute right-0 gradient-text"
+                style="
+                  transform: rotate(90deg);
+                  right: -200px;
+                  margin: 0;
+                  @media (min-width: ;);
+                "
+              >
+                MINTEX
+              </h3>
               <div
-                class="uppercase header-paragraph mt-5 flex gap-10"
+                class="col-span-2 uppercase header-paragraph mt-5 flex gap-10"
                 style="font-weight: 300"
               >
                 <p>
@@ -146,8 +157,8 @@
             <p class="hor-line"></p>
           </h2>
 
-          <div class="flex flex-col md:grid grid-cols-2">
-            <div class="my-5 flex justify-center md:justify-start md:my-40">
+          <div class="flex flex-col xl:grid grid-cols-2">
+            <div class="my-5 flex justify-center xl:justify-start md:my-10">
               <div class="relative">
                 <div id="play-pause" class="play-pause">
                   <div id="play" class="cursor-pointer video-controls">
@@ -157,11 +168,7 @@
                     <i class="fa-sharp fa-solid fa-pause"></i>
                   </div>
                 </div>
-                <video
-                  id="video"
-                  class="video relative bg-blue-400"
-                  width="450"
-                >
+                <video id="video" class="video relative bg-blue-400">
                   <source
                     src="https://www.w3schools.com/html/mov_bbb.mp4"
                     type="video/mp4"
@@ -203,7 +210,7 @@
             Join Us
             <p class="md:ml-10 hor-line flex-grow"></p>
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 py-20 items-center">
+          <div class="grid grid-cols-1 xl:grid-cols-2 py-10 items-center">
             <div>
               <div
                 class="grid grid-cols-2 mx-auto mb-5 grid-rows-2 join-us-card"
@@ -266,15 +273,16 @@
                   src="../assets/images/Takele.jpg"
                   alt=""
                 />
+                <p class="time-line-image-header">Speech Session</p>
               </div>
               <!-- LINE -->
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center overflow-x-hidden">
                 <div class="circle"></div>
                 <div class="line"></div>
               </div>
               <!-- TEXT -->
               <div class="flex items-center" style="width: 49%">
-                <h3 class="time-line-mintex mt-20">MINTEX</h3>
+                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
               </div>
             </div>
             <!-- TimeLine 2-->
@@ -293,6 +301,7 @@
                   src="../assets/images/Takele.jpg"
                   alt=""
                 />
+                <p class="time-line-image-header">Speech Session</p>
               </div>
               <!-- LINE -->
               <div class="flex flex-col items-center">
@@ -301,7 +310,7 @@
               </div>
               <!-- TEXT -->
               <div class="flex items-center justify-end" style="width: 49%">
-                <h3 class="time-line-mintex mt-20">MINTEX</h3>
+                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
               </div>
             </div>
             <!-- TimeLine 3 -->
@@ -315,6 +324,7 @@
                   src="../assets/images/Takele.jpg"
                   alt=""
                 />
+                <p class="time-line-image-header">Speech Session</p>
               </div>
               <!-- LINE -->
               <div class="flex flex-col items-center">
@@ -323,7 +333,7 @@
               </div>
               <!-- TEXT -->
               <div class="flex items-center" style="width: 49%">
-                <h3 class="time-line-mintex mt-20">MINTEX</h3>
+                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
               </div>
             </div>
             <!-- TimeLine 4-->
@@ -342,6 +352,7 @@
                   src="../assets/images/Takele.jpg"
                   alt=""
                 />
+                <p class="time-line-image-header">Speech Session</p>
               </div>
               <!-- LINE -->
               <div class="flex flex-col items-center">
@@ -350,7 +361,7 @@
               </div>
               <!-- TEXT -->
               <div class="flex items-center justify-end" style="width: 49%">
-                <h3 class="time-line-mintex mt-20">MINTEX</h3>
+                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
               </div>
             </div>
           </div>
@@ -366,7 +377,9 @@
           <p class="uppercase my-5 header-subtitle text-center">
             Proudly partnerd with
           </p>
-          <p class="paragraph md:text-center mb-20 font-thin self-center">
+          <p
+            class="paragraph md:text-center mb-20 font-thin self-center text-center"
+          >
             Working alongside Our clients and partners, we funnel our
             creativity, energy, and thought to every brand that will reflect our
             mulutal success. Working alongside Our clients and partners, we
@@ -391,7 +404,11 @@
         </div>
 
         <footer class="footer">
-          <img src="../assets/images/footer-img.png" alt="" />
+          <img
+            class="h-screen object-cover"
+            src="../assets/images/footer-img.png"
+            alt=""
+          />
           <div class="overlay">
             <p>BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR</p>
             <button class="btn">Contact us</button>
