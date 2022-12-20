@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 2000px;
   margin: auto;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 .hero-text {
-  font-size: clamp(30px, 5vw, 90px);
+  font-size: clamp(30px, 4vw, 90px);
   font-family: serif;
   font-weight: bold;
 }
@@ -115,6 +115,7 @@ body {
 
 .hor-line {
   width: 50%;
+  max-width: 300px;
   height: 1px;
   display: inline-block;
   background: white;
@@ -171,11 +172,11 @@ body {
 }
 
 .half-circle:nth-child(1) {
-  background-color: #b60000;
+  background-color: #e3b97a;
 }
 
 .half-circle:nth-child(2) {
-  background-color: #b60000;
+  background-color: #e3b97a;
 }
 
 .half-circle-top {
@@ -183,7 +184,7 @@ body {
 }
 
 .inner-circle {
-  width: clamp(95px, 14vw, 395px);
+  width: clamp(90px, 11.5vw, 395px);
   border-radius: 50%;
   aspect-ratio: 1/1;
   display: flex;

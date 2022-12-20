@@ -80,7 +80,8 @@ const startCountDown = () => {
     const secondDegree = (seconds / 60) * 360;
     const minutesDegree = (minutes / 60) * 360;
     const hoursDegree = (hours / 24) * 360;
-    const daysDegree = (days / 60) * 360;
+    // Assumed 100% of days = 500 days
+    const daysDegree = (days / 500) * 360;
 
     let halfCircles = [
       {
@@ -90,26 +91,26 @@ const startCountDown = () => {
       },
       {
         circle: hourHalfCircles,
-        halfCircleTop: dayHalfCircleTop,
-        degree: minutesDegree,
-      },
-      {
-        circle: dayHalfCircles,
-        halfCircleTop: dayHalfCircleTop,
+        halfCircleTop: hourHalfCircleTop,
         degree: hoursDegree,
       },
+      {
+        circle: minuteHalfCircles,
+        halfCircleTop: minuteHalfCircleTop,
+        degree: minutesDegree,
+      },
     ];
-    // halfCircles.map((i) => {
-    //   i.circle.forEach((el) => {
-    //     el.style.transform = `rotate(${i.degree}deg)`;
-    //     if (i.degree >= 180) {
-    //       i.circle[0].style.transform = "rotate(180deg)";
-    //       i.halfCircleTop.style.opacity = "0";
-    //     } else {
-    //       i.halfCircleTop.style.opacity = "1";
-    //     }
-    //   });
-    // });
+    halfCircles.map((i) => {
+      i.circle.forEach((el) => {
+        el.style.transform = `rotate(${i.degree}deg)`;
+        if (i.degree >= 180) {
+          i.circle[0].style.transform = "rotate(180deg)";
+          i.halfCircleTop.style.opacity = "0";
+        } else {
+          i.halfCircleTop.style.opacity = "1";
+        }
+      });
+    });
 
     // endprogress
 
