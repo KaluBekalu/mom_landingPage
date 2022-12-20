@@ -63,6 +63,22 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* Slider */
+.slider-controller {
+  width: 5vw;
+  height: 5px;
+  margin-top: 20px;
+  background-color: #828282;
+  display: inline-block;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+.slider-controller-active {
+  background-color: #e3b97a;
+  transition: 0.6s ease;
+}
+/* End Slider */
 .btn {
   padding-block: 5px;
   padding-inline: 20px;

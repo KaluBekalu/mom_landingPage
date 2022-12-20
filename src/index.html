@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +28,23 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .slide {
+        width: 1000px;
+        height: 100%;
+        background-color: red;
+        object-fit: cover;
+      }
+      .slides-container {
+        overflow-x: scroll;
+        display: flex;
+        height: 100vh;
+        gap: 50px;
+        padding-block: 20px;
+        justify-content: space-between;
+      }
+    </style>
 
     <title>MINTEX</title>
   </head>
@@ -49,27 +67,95 @@
         class="content scrollbar-hidden h-screen flex-1 overflow-y-scroll p-10 grid grid-cols-1 gap-10 gap-y-20"
       >
         <!-- Hero section -->
+
         <div
-          class="hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
+          class="col-span-1 w3-content w3-display-container"
+          style="max-width: unset; margin: unset"
         >
           <div
-            class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+            class="slides w3-animate-fading hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
           >
-            <h3 class="uppercase hero-date flex items-center gap-4">
-              <p class="hidden md:block hero-date-line"></p>
-              November 8 - 10
-            </h3>
-            <h1
-              class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+            <div
+              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
             >
-              Mining and Technology Expo
-            </h1>
-            <div class="col-span-2 md:order-3 order-3">
-              <button class="btn">Reserve a Booth</button>
+              1
+              <h3 class="uppercase hero-date flex items-center gap-4">
+                <p class="hidden md:block hero-date-line"></p>
+                November 8 - 10
+              </h3>
+              <h1
+                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              >
+                Mining and Technology Expo
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Reserve a Booth</button>
+              </div>
+            </div>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
             </div>
           </div>
-          <div class="flex order-1 md:order-2 justify-center md:justify-end">
-            <img src="../assets/momlogo.png" class="self-center hero-image" />
+
+          <div
+            class="slides w3-animate-fading hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
+          >
+            <div
+              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+            >
+              2
+              <h3 class="uppercase hero-date flex items-center gap-4">
+                <p class="hidden md:block hero-date-line"></p>
+                November 8 - 10
+              </h3>
+              <h1
+                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              >
+                Mining and Technology Expo
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Reserve a Booth</button>
+              </div>
+            </div>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
+            </div>
+          </div>
+          <div
+            class="slides w3-animate-fading hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
+          >
+            <div
+              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+            >
+              3
+              <h3 class="uppercase hero-date flex items-center gap-4">
+                <p class="hidden md:block hero-date-line"></p>
+                November 8 - 10
+              </h3>
+              <h1
+                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              >
+                Mining and Technology Expo
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Reserve a Booth</button>
+              </div>
+            </div>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
+            </div>
+          </div>
+
+          <div
+            class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width: 100%"
+          >
+            <span
+              class="slider-controller slider-controller-active"
+              onclick="currentDiv(1)"
+            ></span>
+            <span class="slider-controller" onclick="currentDiv(2)"></span>
+            <span class="slider-controller" onclick="currentDiv(3)"></span>
           </div>
         </div>
 
