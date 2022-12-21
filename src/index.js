@@ -53,10 +53,10 @@ const minuteHalfCircleTop = document.querySelector(".minute-half-circle-top");
 const dayEl = document.getElementById("day");
 const hourEl = document.getElementById("hour");
 const minuteEl = document.getElementById("minute");
-const secEl = document.getElementById("sec");
+// const secEl = document.getElementById("sec");
 
 const startCountDown = () => {
-  var countDownDate = new Date("Apr 1, 2024").getTime();
+  var countDownDate = new Date("Apr 1, 2023").getTime();
 
   var interval = setInterval(function () {
     var now = new Date().getTime();
@@ -74,14 +74,14 @@ const startCountDown = () => {
     dayEl.innerText = days;
     hourEl.innerText = hours;
     minuteEl.innerText = minutes;
-    secEl.innerText = seconds;
+    // secEl.innerText = seconds;
 
     // progress
     const secondDegree = (seconds / 60) * 360;
     const minutesDegree = (minutes / 60) * 360;
     const hoursDegree = (hours / 24) * 360;
-    // Assumed 100% of days = 500 days
-    const daysDegree = (days / 500) * 360;
+    // 100% of 1year = 366 days /i.e/ let expected_date in x years - no of days = n*x
+    const daysDegree = (days / 366) * 360;
 
     let halfCircles = [
       {
@@ -120,7 +120,7 @@ const startCountDown = () => {
       dayEl.innerText = "0";
       hourEl.innerText = "0";
       minuteEl.innerText = "0";
-      secEl.innerText = "0";
+      // secEl.innerText = "0";
     }
   }, 1000);
 };

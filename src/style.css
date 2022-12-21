@@ -100,7 +100,7 @@ body {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(0deg, #e3b97a90, #e3b97a);
+  background: -webkit-linear-gradient(0deg, #d5a45a90, #e3b97a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -168,7 +168,7 @@ body {
 .progressbar {
   width: clamp(101px, 15.5vw, 401px);
   aspect-ratio: 1/1;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
   border-radius: 50%;
   position: fixed;
   top: 50%;
@@ -188,11 +188,11 @@ body {
 }
 
 .half-circle:nth-child(1) {
-  background-color: #e3b97a;
+  background-color: #f9b34a;
 }
 
 .half-circle:nth-child(2) {
-  background-color: #e3b97a;
+  background-color: #f9b34a;
 }
 
 .half-circle-top {
@@ -200,7 +200,7 @@ body {
 }
 
 .inner-circle {
-  width: clamp(90px, 11.5vw, 395px);
+  width: 96%;
   border-radius: 50%;
   aspect-ratio: 1/1;
   display: flex;
@@ -309,11 +309,11 @@ body {
   border-right: 1px solid white;
 }
 .card-box > h3 {
-  font-size: clamp(20px, 3vw, 200px);
+  font-size: clamp(18px, 2.7vw, 200px);
   font-weight: bold;
 }
 .card-box > span {
-  font-size: clamp(15px, 1vw, 30px);
+  font-size: clamp(12px, 1vw, 30px);
 }
 .footer {
   position: relative;
@@ -377,12 +377,10 @@ body {
   font-size: clamp(1em, 3vw, 36px);
 }
 .time-line-mintex {
-  /* font-size: 140px; */
-  /* font-size: clamp(30px, 3vw, 140px); */
-  font-size: clamp(15px, 3.4vw, 200px);
+  font-size: clamp(15px, 3.2vw, 200px);
   opacity: 0.5;
   font-weight: 100;
-  letter-spacing: clamp(15px, 2vw, 60px);
+  letter-spacing: clamp(13px, 1.4vw, 60px);
 }
 .time-line-card-image {
   width: clamp(50px, 30vw, 400px);
