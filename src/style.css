@@ -1,5 +1,6 @@
 body {
   font-family: Poppins;
+  background: #333;
 }
 
 .container {
@@ -37,7 +38,7 @@ body {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 20px;
   transition: all 0.5s ease-in;
 }
 
@@ -81,44 +82,67 @@ body {
 /* End Slider */
 .btn {
   padding-block: 5px;
-  padding-inline: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-inline: 30px;
   border: 1px solid #e3b97a;
-  /* font-size: clamp(11px, 3vw, 29px); */
-  font-size: clamp(11px, 2vw, 29px);
+  /* font-size: clamp(14px, 3vw, 29px); */
+  font-size: clamp(14px, 1.4vw, 16px);
+  border-radius: 5px;
+  transition: all 0.33s;
 
   color: #e3b97a;
 }
 .btn:hover {
   border: 1px solid #857152;
-  color: #857152;
+  background: #857152;
+  color: #fff;
 }
 
 .hero-text {
-  font-size: clamp(30px, 4vw, 90px);
+  font-size: clamp(48px, 5vw, 96px);
   font-family: serif;
   font-weight: bold;
+  line-height: clamp(48px, 5vw, 96px);
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(0deg, #d5a45a90, #e3b97a);
+  /* background: -webkit-linear-gradient(0deg, #d5a45a90, #e3b97a); */
+  background: -webkit-linear-gradient(
+    0deg,
+    /* #7e5936, */ #d5a45a90,
+    #e3b97a,
+    #f5cb86,
+    #f5cb86
+  );
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-image {
-  width: clamp(200px, 60%, 700px);
+  width: clamp(200px, 75%, 700px);
+}
+.hero-date {
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.753);
+  font-size: 21px;
 }
 
 .hero-date-line {
-  width: 100px;
+  width: 40px;
   height: 1px;
-  background: white;
+  background: #ffffff52;
 }
 
 .header-title {
   font-size: clamp(30px, 5vw, 80px);
   font-weight: 200;
   text-align: center;
+  font-family: raleway;
+  font-weight: 100;
+  letter-spacing: 10px;
 }
 
 .header-subtitle {
@@ -134,7 +158,7 @@ body {
   max-width: 300px;
   height: 1px;
   display: inline-block;
-  background: white;
+  background: #707070;
 }
 
 #time-container {
@@ -196,7 +220,7 @@ body {
 }
 
 .half-circle-top {
-  background-color: #fff;
+  background-color: #707070;
 }
 
 .inner-circle {
@@ -241,7 +265,7 @@ body {
   /* height: clamp(250px, 30vw, 500px); */
   aspect-ratio: 1/1;
   border-radius: 100%;
-  box-shadow: 0px 10px 15px -3px #e3b97a40;
+  box-shadow: 0px 0px 30px 12px #e3b97a40;
 }
 
 .video-icon {
@@ -256,12 +280,12 @@ body {
   text-align: left;
   text-transform: uppercase;
   /* font-size: clamp(30px, 6vw, 80px); */
-  font-size: clamp(30px, 3.5vw, 80px) !important;
+  font-size: clamp(40px, 4vw, 80px) !important;
 }
 
 .about-scrollable {
   margin-block: 20px;
-  height: clamp(100px, 10vw, 500px);
+  height: clamp(130px, 12vw, 600px);
   /* height: 25%; */
 }
 
@@ -291,7 +315,7 @@ body {
   max-width: 60%;
   aspect-ratio: 1/1;
   border-radius: 30px;
-  box-shadow: 0px 10px 15px -3px #ffba5340;
+  box-shadow: 0px 0px 30px 12px #e3b97a40;
 }
 
 .card-box {
@@ -309,11 +333,15 @@ body {
   border-right: 1px solid white;
 }
 .card-box > h3 {
-  font-size: clamp(18px, 2.7vw, 200px);
-  font-weight: bold;
+  font-size: clamp(18px, 3vw, 200px);
+  font-weight: 100;
+  font-family: raleway;
+  color: whitesmoke;
 }
 .card-box > span {
   font-size: clamp(12px, 1vw, 30px);
+  letter-spacing: 2px;
+  font-weight: 300;
 }
 .footer {
   position: relative;
@@ -351,14 +379,14 @@ body {
 .line {
   width: 1px;
   flex-grow: 1;
-  background-color: white;
+  background-color: #f0dfc6;
 }
 
 .circle {
   width: clamp(20px, 4vw, 50px);
   height: clamp(20px, 4vw, 50px);
   border-radius: 100px;
-  background-color: white;
+  background-color: #f0dfc6;
 }
 
 .time-line-card {
@@ -367,25 +395,31 @@ body {
   align-items: end;
 }
 .time-line-time {
-  font-size: clamp(1em, 3vw, 48px);
+  font-size: clamp(1em, 1vw, 18px);
+  font-weight: 700;
+  color: #f0dfc6;
 }
 .time-line-date {
-  font-size: clamp(1em, 3vw, 32px);
+  font-size: clamp(1em, 2vw, 32px);
+  font-weight: 200;
 }
 .time-line-image-header {
   font-weight: bold;
-  font-size: clamp(1em, 3vw, 36px);
+  font-size: clamp(1em, 3vw, 24px);
 }
 .time-line-mintex {
-  font-size: clamp(15px, 3.2vw, 200px);
+  font-size: clamp(15px, 7vw, 200px);
   opacity: 0.5;
   font-weight: 100;
-  letter-spacing: clamp(13px, 1.4vw, 60px);
+  letter-spacing: clamp(13px, 2vw, 60px);
+  font-family: raleway;
 }
 .time-line-card-image {
-  width: clamp(50px, 30vw, 400px);
-  aspect-ratio: 1/1 !important;
+  width: clamp(72px, 30vw, 260px);
+  /* aspect-ratio: 1/1 !important; */
   object-fit: cover;
   border-radius: 20px;
   aspect-ratio: 12/19;
+  margin: 20px 0;
+  box-shadow: 0px 0px 30px 12px #e3b97a40;
 }

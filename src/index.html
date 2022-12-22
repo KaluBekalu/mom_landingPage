@@ -9,6 +9,10 @@
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
@@ -48,19 +52,19 @@
 
     <title>MINTEX</title>
   </head>
-  <body class="bg-gray-900">
-    <div class="flex container bg-gray-900 text-white">
+  <body>
+    <div class="flex container text-white">
       <!-- right side static -->
       <div
-        class="hidden h-screen p-5 bg-[#50d71e] md:flex flex-col items-center justify-between pb-20"
+        class="hidden h-screen p-5 md:flex flex-col items-center justify-between pb-20"
       >
         <img src="../assets/momlogo.png" class="w-20" />
-        <div class="social-icons">
+        <div class="social-icons" style="font-size: 16px">
           <i class="fa-brands fa-facebook-f"></i>
           <i class="fa-brands fa-instagram"></i>
           <i class="fa-brands fa-linkedin-in"></i>
         </div>
-        <p class="text-xl">MINTEX</p>
+        <p class="text-xl font-thin tracking-wider">MINTEX</p>
       </div>
       <!-- Middle scrollable section -->
       <div
@@ -68,103 +72,122 @@
       >
         <!-- Hero section -->
 
-        <div
-          class="col-span-1 w3-content w3-display-container"
-          style="max-width: unset; margin: unset"
+        <section
+          class="Hero-section flex items-center justify-center md:justify-start"
+          style="min-height: 90vh"
         >
           <div
-            class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
+            class="col-span-1 w3-content w3-display-container h-full flex items-center"
+            style="max-width: unset; margin: unset"
           >
             <div
-              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
             >
-              1
-              <h3 class="uppercase hero-date flex items-center gap-4">
-                <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
-              </h3>
-              <h1
-                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              <div
+                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
               >
-                Mining and Technology Expo
-              </h1>
-              <div class="col-span-2 md:order-3 order-3">
-                <button class="btn">Reserve a Booth</button>
+                <h3
+                  class="uppercase hero-date flex items-center gap-4 font-thin"
+                >
+                  <p class="hidden md:block hero-date-line font-thin"></p>
+                  November 8 - 10
+                </h3>
+                <h1
+                  class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+                >
+                  Mining and Technology Expo
+                </h1>
+                <div class="col-span-2 md:order-3 order-3">
+                  <button class="btn">Register</button>
+                </div>
+              </div>
+              <div
+                class="flex order-1 md:order-2 justify-center md:justify-end"
+              >
+                <img
+                  src="../assets/momlogo.png"
+                  class="self-center hero-image"
+                />
               </div>
             </div>
-            <div class="flex order-1 md:order-2 justify-center md:justify-end">
-              <img src="../assets/momlogo.png" class="self-center hero-image" />
-            </div>
-          </div>
 
-          <div
-            class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-          >
             <div
-              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
             >
-              2
-              <h3 class="uppercase hero-date flex items-center gap-4">
-                <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
-              </h3>
-              <h1
-                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              <div
+                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
               >
-                Mining and Technology Expo
-              </h1>
-              <div class="col-span-2 md:order-3 order-3">
-                <button class="btn">Reserve a Booth</button>
+                <h3 class="uppercase hero-date flex items-center gap-4">
+                  <p class="hidden md:block hero-date-line"></p>
+                  November 8 - 10
+                </h3>
+                <h1
+                  class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+                >
+                  The Biggest Mining Expo in Africa
+                </h1>
+                <div class="col-span-2 md:order-3 order-3">
+                  <button class="btn">Register</button>
+                </div>
+              </div>
+              <div
+                class="flex order-1 md:order-2 justify-center md:justify-end"
+              >
+                <img
+                  src="../assets/momlogo.png"
+                  class="self-center hero-image"
+                />
               </div>
             </div>
-            <div class="flex order-1 md:order-2 justify-center md:justify-end">
-              <img src="../assets/momlogo.png" class="self-center hero-image" />
-            </div>
-          </div>
-          <div
-            class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-          >
             <div
-              class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
+              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
             >
-              3
-              <h3 class="uppercase hero-date flex items-center gap-4">
-                <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
-              </h3>
-              <h1
-                class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+              <div
+                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
               >
-                Mining and Technology Expo
-              </h1>
-              <div class="col-span-2 md:order-3 order-3">
-                <button class="btn">Reserve a Booth</button>
+                <h3 class="uppercase hero-date flex items-center gap-4">
+                  <p class="hidden md:block hero-date-line"></p>
+                  November 8 - 10
+                </h3>
+                <h1
+                  class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
+                >
+                  Where The Future Technology be revealed
+                </h1>
+                <div class="col-span-2 md:order-3 order-3">
+                  <button class="btn">Register</button>
+                </div>
+              </div>
+              <div
+                class="flex order-1 md:order-2 justify-center md:justify-end"
+              >
+                <img
+                  src="../assets/momlogo.png"
+                  class="self-center hero-image"
+                />
               </div>
             </div>
-            <div class="flex order-1 md:order-2 justify-center md:justify-end">
-              <img src="../assets/momlogo.png" class="self-center hero-image" />
-            </div>
-          </div>
 
-          <div
-            class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-            style="width: 100%"
-          >
-            <span
-              class="slider-controller slider-controller-active"
-              onclick="currentDiv(1)"
-            ></span>
-            <span class="slider-controller" onclick="currentDiv(2)"></span>
-            <span class="slider-controller" onclick="currentDiv(3)"></span>
+            <div
+              class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+              style="width: 100%"
+            >
+              <span
+                class="slider-controller slider-controller-active"
+                onclick="currentDiv(1)"
+              ></span>
+              <span class="slider-controller" onclick="currentDiv(2)"></span>
+              <span class="slider-controller" onclick="currentDiv(3)"></span>
+            </div>
           </div>
-        </div>
+        </section>
 
         <!-- Mintex is coming -->
-        <div class="mt-10">
+        <div class="mt-10" style="min-height: 90vh">
           <h2
-            class="uppercase header-title gradient-text flex flex-col items-center mb-10"
+            class="uppercase header-title gradient-text flex flex-col items-center mb-16"
           >
-            MINTEX IS COMING
+            <span>MINTEX IS COMING</span>
             <p class="hor-line"></p>
           </h2>
 
@@ -175,29 +198,38 @@
               <!-- Countdown -->
               <div id="time-container" class="col-span-2 gap-5">
                 <!-- Days -->
-                <div class="time day relative overflow-hidden bg-white">
+                <div
+                  class="time day relative overflow-hidden"
+                  style="background-color: #707070"
+                >
                   <div class="half-circle day-half-circle"></div>
                   <div class="half-circle day-half-circle"></div>
                   <div class="half-circle-top day-half-circle-top"></div>
-                  <div class="z-10 bg-gray-900 inner-circle">
+                  <div class="z-10 inner-circle" style="background: #333">
                     <p id="day"></p>
                     <span>DAYS</span>
                   </div>
                 </div>
-                <div class="time day relative overflow-hidden bg-white">
+                <div
+                  class="time day relative overflow-hidden"
+                  style="background-color: #707070"
+                >
                   <div class="half-circle hour-half-circle"></div>
                   <div class="half-circle hour-half-circle"></div>
                   <div class="half-circle-top hour-half-circle-top"></div>
-                  <div class="z-10 bg-gray-900 inner-circle">
+                  <div class="z-10 inner-circle" style="background: #333">
                     <p id="hour"></p>
                     <span>Hours</span>
                   </div>
                 </div>
-                <div class="time day relative overflow-hidden bg-white">
+                <div
+                  class="time day relative overflow-hidden"
+                  style="background-color: #707070"
+                >
                   <div class="half-circle minute-half-circle"></div>
                   <div class="half-circle minute-half-circle"></div>
                   <div class="half-circle-top minute-half-circle-top"></div>
-                  <div class="z-10 bg-gray-900 inner-circle">
+                  <div class="z-10 inner-circle" style="background: #333">
                     <p id="minute"></p>
                     <span>Minutes</span>
                     <!-- <div><span class="text-sx" id="sec">0</span>s</div> -->
@@ -228,7 +260,7 @@
                   fugit id corporis impedit.
                 </p>
                 <button class="btn" style="border-color: white; color: white">
-                  Reserve a Booth
+                  Register
                 </button>
               </div>
               <h3
@@ -244,7 +276,7 @@
               </h3>
               <div
                 class="col-span-2 uppercase header-paragraph mt-5 flex gap-10"
-                style="font-weight: 300"
+                style="font-weight: 200; letter-spacing: 3px"
               >
                 <p>
                   Date <br />
@@ -279,7 +311,10 @@
                     <i class="fa-sharp fa-solid fa-pause"></i>
                   </div>
                 </div>
-                <video id="video" class="video relative bg-blue-400">
+                <video
+                  id="video"
+                  class="video relative bg-blue-400 box-shadow-2xl"
+                >
                   <source
                     src="https://www.w3schools.com/html/mov_bbb.mp4"
                     type="video/mp4"
@@ -317,7 +352,7 @@
         <!-- JOIN US -->
         <div>
           <h3
-            class="uppercase flex flex-col md:flex-row items-center header-title w-full"
+            class="uppercase flex flex-col md:flex-row items-center header-title gradient-text w-full"
           >
             Join Us
             <p class="md:ml-10 hor-line flex-grow"></p>
@@ -347,10 +382,13 @@
             </div>
 
             <div class="">
-              <h3 class="header-subtitle font-thin">
+              <h3
+                class="header-subtitle font-thin"
+                style="font-size: clamp(2rem, 4vw, 2.5rem)"
+              >
                 WHO IS COMING TO THIS YEAR'S MINTEX?
               </h3>
-              <p class="paragraph font-thin my-5">
+              <p class="paragraph my-5" style="font-weight: 100">
                 MINTEX is aiming to be Africa’s largest and most prominent
                 mining event, embracing the whole value chain of survey and
                 assessment, exploration and mining, technology and equipment,
@@ -383,7 +421,7 @@
                 <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
-                  src="../assets/images/Takele.jpg"
+                  src="../assets/images/EngineerTakele.jpg"
                   alt=""
                 />
                 <p class="time-line-image-header">Speech Session</p>
@@ -411,7 +449,7 @@
                 <p class="time-line-date font-bold">12 Nov 2022</p>
                 <img
                   class="time-line-card-image"
-                  src="../assets/images/Takele.jpg"
+                  src="https://images.unsplash.com/photo-1600320844678-43cebba1cdfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60"
                   alt=""
                 />
                 <p class="time-line-image-header">Speech Session</p>
@@ -539,13 +577,19 @@
         </div>
 
         <div class="flex-1 flex-col flex items-center">
-          <p class="bg-white flex-1 my-3" style="width: 1px"></p>
+          <p
+            class="flex-1 my-3"
+            style="width: 1px; background-color: rgba(253, 253, 253, 0.6)"
+          ></p>
           <p class="scroll-down my-5">scroll</p>
           <p
             class="bg-white flex-1 gap-0 flex items-end justify-center"
-            style="width: 1px"
+            style="width: 1px; background-color: rgba(253, 253, 253, 0.6)"
           >
-            <i class="fa-solid fa-arrow-down text-white bg-gray-900"></i>
+            <i
+              class="fa-solid fa-arrow-down text-white font-thin"
+              style="color: rgba(255, 255, 255, 0.6)"
+            ></i>
           </p>
         </div>
       </div>

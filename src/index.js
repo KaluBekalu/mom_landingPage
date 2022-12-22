@@ -56,7 +56,7 @@ const minuteEl = document.getElementById("minute");
 // const secEl = document.getElementById("sec");
 
 const startCountDown = () => {
-  var countDownDate = new Date("Apr 1, 2023").getTime();
+  var countDownDate = new Date("Oct 1, 2023 15:30:00").getTime();
 
   var interval = setInterval(function () {
     var now = new Date().getTime();
