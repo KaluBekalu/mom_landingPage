@@ -1,6 +1,7 @@
 body {
   font-family: Poppins;
   background: #333;
+  font-size: 20px;
 }
 
 .container {
@@ -422,4 +423,35 @@ body {
   aspect-ratio: 12/19;
   margin: 20px 0;
   box-shadow: 0px 0px 30px 12px #e3b97a40;
+}
+
+/* Contact us */
+.contact-us {
+  /* font-size: 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  gap: 10px;
+}
+
+.contact-us {
+  display: flex;
+}
+.contact-us > label {
+  height: fit-content;
+  background: red;
+  padding: 0;
+}
+.input {
+  width: 100%;
+  height: clamp(35px, 4vw, 60px);
+  padding-block: 5px;
+  padding-inline: 20px;
+  border: 1px solid #e3b97a;
+  font-size: clamp(11px, 2vw, 29px);
+  color: #fff;
+  background-color: transparent;
+}
+.text-area {
+  height: 200px;
 }

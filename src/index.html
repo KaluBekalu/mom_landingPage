@@ -283,7 +283,7 @@
                   PLACE
                 </p>
                 <p>
-                  November 10 - 12 <br />
+                  <span class="target-date uppercase"></span> <br />
                   Mellinium Hall, Addis Ababa
                 </p>
               </div>
@@ -561,8 +561,50 @@
             alt=""
           />
           <div class="overlay">
-            <p>BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR</p>
-            <button class="btn">Contact us</button>
+            <p class="footer-heading mb-5">
+              BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+              <div
+                class="col-span-1 flex flex-col items-center justify-center p-5"
+              >
+                <h2 class="uppercase font-bold header-title">Get in touch</h2>
+                <div class="flex text-xl gap-2 items-center">
+                  <p>Email:</p>
+                  <p class="">some@mail.com</p>
+                </div>
+                <div class="flex text-xl gap-2 items-center">
+                  <p>Phone:</p>
+                  <p class="">+123456789</p>
+                </div>
+              </div>
+              <div class="gap-3 contact-us p-5 col-span-1">
+                <input
+                  class="input mb-5"
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+
+                <input
+                  class="input mb-5"
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+
+                <textarea
+                  name="message"
+                  class="input mb-5 text-area"
+                  id="message"
+                  cols=""
+                  rows="40"
+                ></textarea>
+
+                <button class="btn">Send mail</button>
+              </div>
+            </div>
           </div>
         </footer>
       </div>

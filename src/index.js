@@ -1,3 +1,35 @@
+//SET A GLOBAL DATE
+
+// NOTE - If you update this the change is going to
+// reflect every where [Use the correct date format]
+const globalStartDate = "Jun 1, 2023";
+const globalEndDate = "Jun 3, 2023";
+const dateElements = document.getElementsByClassName("target-date");
+
+const setDate = () => {
+  const sDrray = new Date(globalStartDate).toDateString().split(" ");
+  let endDate = new Date(globalEndDate).getDate().toString();
+  let endDay = new Date(globalEndDate).toDateString().split(" ")[0];
+  console.log(endDate);
+  endDate.length == 1 ? (endDate = "0" + endDate) : (endDate = endDate);
+  for (let i = 0; i < dateElements.length; i++) {
+    dateElements[i].innerText =
+      sDrray[0] +
+      " " +
+      sDrray[1] +
+      " " +
+      sDrray[2] +
+      " - " +
+      endDay +
+      " " +
+      endDate;
+  }
+};
+
+setDate();
+
+//END SET A GLOBAL DATE
+
 //VIDEO
 const video = document.getElementById("video");
 const videoHandle = document.getElementById("play-pause");
@@ -56,7 +88,7 @@ const minuteEl = document.getElementById("minute");
 // const secEl = document.getElementById("sec");
 
 const startCountDown = () => {
-  var countDownDate = new Date("Oct 1, 2023 15:30:00").getTime();
+  var countDownDate = new Date(globalStartDate).getTime();
 
   var interval = setInterval(function () {
     var now = new Date().getTime();
