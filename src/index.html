@@ -81,7 +81,7 @@
               1
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
+                <span class="target-date uppercase"></span>
               </h3>
               <h1
                 class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
@@ -106,7 +106,7 @@
               2
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
+                APRIL 1, 2023
               </h3>
               <h1
                 class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
@@ -130,7 +130,7 @@
               3
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
-                November 8 - 10
+                APRIL 1, 2023
               </h3>
               <h1
                 class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
@@ -251,7 +251,7 @@
                   PLACE
                 </p>
                 <p>
-                  November 10 - 12 <br />
+                  <span class="target-date uppercase"></span> <br />
                   Mellinium Hall, Addis Ababa
                 </p>
               </div>
@@ -523,8 +523,54 @@
             alt=""
           />
           <div class="overlay">
-            <p>BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR</p>
-            <button class="btn">Contact us</button>
+            <p class="text-6xl mb-10">
+              BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR
+            </p>
+
+            <div class="grid grid-cols-2">
+              <div class="contact-us col-span-1">
+                <label for="name">
+                  <input
+                    class="input"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name"
+                  />
+                </label>
+                <label for="email">
+                  <input
+                    class="input"
+                    id="email"
+                    type="text"
+                    placeholder="Enter your email"
+                  />
+                </label>
+                <label for="message">
+                  <textarea
+                    name="message"
+                    class="input text-area"
+                    id="message"
+                    cols=""
+                    rows="40"
+                  ></textarea>
+                </label>
+                <button class="btn">Send mail</button>
+              </div>
+
+              <div
+                class="col-span-1 flex flex-col items-center justofy-center p-20"
+              >
+                <h2 class="uppercase font-bold text-5xl">Get in touch</h2>
+                <div class="flex text-xl gap-2 items-center">
+                  <h3>Email:</h3>
+                  <p class="">some@mail.com</p>
+                </div>
+                <div class="flex text-xl gap-2 items-center">
+                  <h3>Phone:</h3>
+                  <p class="">+123456789</p>
+                </div>
+              </div>
+            </div>
           </div>
         </footer>
       </div>
