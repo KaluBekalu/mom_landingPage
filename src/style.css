@@ -1,3 +1,47 @@
+
+/* scroll bar style */
+
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #666;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #646464;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #666;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #646464;
+}
+
+::-webkit-resizer {
+  background-color: #666;
+}
+
+/* scroll bar style end  */
 body {
   font-family: Poppins;
   background: #333;
@@ -18,7 +62,7 @@ body {
   justify-content: center;
 }
 
-.social-icons > i {
+.social-icons>i {
   cursor: pointer;
 }
 
@@ -26,6 +70,7 @@ body {
   transform: rotate(45deg);
   transition: all 0.5s ease-in;
 }
+
 .menu-open-item-3 {
   transition: all 0.5s ease-in;
   transform: translate(0, -23px) rotate(-45deg);
@@ -43,7 +88,7 @@ body {
   transition: all 0.5s ease-in;
 }
 
-.menu > p {
+.menu>p {
   background-color: #fff;
   width: 30px;
   height: 2px;
@@ -62,8 +107,10 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* Slider */
@@ -76,10 +123,12 @@ body {
   transition: 0.6s ease;
   cursor: pointer;
 }
+
 .slider-controller-active {
   background-color: #e3b97a;
   transition: 0.6s ease;
 }
+
 /* End Slider */
 .btn {
   padding-block: 5px;
@@ -94,6 +143,7 @@ body {
 
   color: #e3b97a;
 }
+
 .btn:hover {
   border: 1px solid #857152;
   background: -webkit-linear-gradient(0deg, #7e5936, #d5a45a);
@@ -110,13 +160,12 @@ body {
 
 .gradient-text {
   /* background: -webkit-linear-gradient(0deg, #d5a45a90, #e3b97a); */
-  background: -webkit-linear-gradient(
-    0deg,
-    /* #7e5936, */ #d5a45a90,
-    #e3b97a,
-    #f5cb86,
-    #f5cb86
-  );
+  background: -webkit-linear-gradient(0deg,
+      /* #7e5936, */
+      #d5a45a90,
+      #e3b97a,
+      #f5cb86,
+      #f5cb86);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,6 +174,7 @@ body {
 .hero-image {
   width: clamp(200px, 75%, 700px);
 }
+
 .hero-date {
   font-weight: 100;
   letter-spacing: 3px;
@@ -169,8 +219,7 @@ body {
   margin-block: clamp(20px, 3vw, 150px);
 }
 
-.rotated-mintex {
-}
+.rotated-mintex {}
 
 .time {
   width: clamp(100px, 15vw, 400px);
@@ -247,16 +296,18 @@ body {
   font-size: 4rem;
   z-index: 10;
 }
+
 /*  */
-.time > p,
-.inner-circle > p {
+.time>p,
+.inner-circle>p {
   font-size: clamp(15px, 6vw, 35px);
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.time > p > span,
-.inner-circle > p > span {
+
+.time>p>span,
+.inner-circle>p>span {
   font-size: clamp(12px, 2.5vw, 20px);
   font-weight: 200;
 }
@@ -267,7 +318,7 @@ body {
   /* height: clamp(250px, 30vw, 500px); */
   aspect-ratio: 1/1;
   border-radius: 100%;
-  box-shadow: 0px 0px 30px 12px #e3b97a40;
+  box-shadow: 0px 0px 50px 50px #e3b97a40;
 }
 
 .video-icon {
@@ -330,21 +381,25 @@ body {
   flex-direction: column;
   text-align: center;
 }
+
 .card-box:nth-child(1),
 .card-box:nth-child(3) {
   border-right: 1px solid white;
 }
-.card-box > h3 {
+
+.card-box>h3 {
   font-size: clamp(18px, 3vw, 200px);
   font-weight: 100;
   font-family: raleway;
   color: whitesmoke;
 }
-.card-box > span {
+
+.card-box>span {
   font-size: clamp(12px, 1vw, 30px);
   letter-spacing: 2px;
   font-weight: 300;
 }
+
 .footer {
   position: relative;
 }
@@ -370,14 +425,15 @@ body {
 }
 
 /* time-line */
-.time-line-card-container {
-}
+.time-line-card-container {}
+
 .time-line {
   display: flex;
   /* height: 100vh; */
   flex-direction: column;
   align-items: center;
 }
+
 .line {
   width: 1px;
   flex-grow: 1;
@@ -396,19 +452,23 @@ body {
   flex-direction: column;
   align-items: end;
 }
+
 .time-line-time {
   font-size: clamp(1em, 1vw, 18px);
   font-weight: 700;
   color: #f0dfc6;
 }
+
 .time-line-date {
   font-size: clamp(1em, 2vw, 32px);
   font-weight: 200;
 }
+
 .time-line-image-header {
   font-weight: bold;
   font-size: clamp(1em, 3vw, 24px);
 }
+
 .time-line-mintex {
   font-size: clamp(15px, 7vw, 200px);
   opacity: 0.5;
@@ -416,6 +476,7 @@ body {
   letter-spacing: clamp(13px, 2vw, 60px);
   font-family: raleway;
 }
+
 .time-line-card-image {
   width: clamp(72px, 30vw, 260px);
   /* aspect-ratio: 1/1 !important; */
@@ -438,11 +499,13 @@ body {
 .contact-us {
   display: flex;
 }
-.contact-us > label {
+
+.contact-us>label {
   height: fit-content;
   background: red;
   padding: 0;
 }
+
 .input {
   width: 100%;
   height: clamp(35px, 4vw, 60px);
@@ -453,6 +516,25 @@ body {
   color: #fff;
   background-color: transparent;
 }
+
 .text-area {
   height: 200px;
+}
+.carousel .one{
+  background-image: url(https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973__340.jpg);
+  background-size: 100% 100%;
+}
+
+.carousel .two {
+  background-image: url(https://cdn.pixabay.com/photo/2018/05/30/00/24/thunderstorm-3440450__340.jpg);
+  background-size: 100% 100%;
+}
+
+.carousel .three{
+  background-image: url(https://images.unsplash.com/photo-1585383234137-2367d3c5302d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-size: 100% 100%;
+}
+
+.input{
+    font-size: clamp(14px, 1.4vw, 16px);
 }

@@ -1,661 +1,533 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="../assets/momlogo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&family=Roboto:wght@100;300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/x-icon" href="../assets/momlogo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&family=Roboto:wght@100;300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css" />
 
-    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
-    <script>
-      var cursor = new MouseFollower();
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+  <script>
+    var cursor = new MouseFollower();
       // const el = document.querySelector(".this");
 
       // el.addEventListener("mouseenter", () => {
       //   cursor.setText("Hello!");
       // });
-    </script>
-    <style>
-      .slide {
-        width: 1000px;
-        height: 100%;
-        background-color: red;
-        object-fit: cover;
-      }
-      .slides-container {
-        overflow-x: scroll;
-        display: flex;
-        height: 100vh;
-        gap: 50px;
-        padding-block: 20px;
-        justify-content: space-between;
-      }
-    </style>
+  </script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <title>MINTEX</title>
-  </head>
-  <body>
-    <script>
-      AOS.init();
-    </script>
-    <div class="flex container text-white">
-      <!-- right side static -->
-      <div
-        class="hidden h-screen p-5 md:flex flex-col items-center justify-between pb-20"
-      >
-        <img src="../assets/momlogo.png" class="w-20" />
-        <div class="social-icons" style="font-size: 16px">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-        </div>
-        <p class="text-xl font-thin tracking-wider">MINTEX</p>
+    .slide {
+      width: 1000px;
+      height: 100%;
+      background-color: red;
+      object-fit: cover;
+    }
+
+    .slides-container {
+      overflow-x: scroll;
+      display: flex;
+      height: 100vh;
+      gap: 50px;
+      padding-block: 20px;
+      justify-content: space-between;
+    }
+  </style>
+
+  <title>MINTEX</title>
+</head>
+
+<body>
+  <script>
+    AOS.init();
+  </script>
+  <div class="flex container text-white">
+    <!-- right side static -->
+    <div class="hidden h-screen p-5 fixed left-0 md:flex flex-col items-center justify-between pb-20">
+      <img src="../assets/momlogo.png" class="w-20" />
+      <div class="social-icons" style="font-size: 16px">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
       </div>
-      <!-- Middle scrollable section -->
-      <div
-        class="content scrollbar-hidden h-screen flex-1 overflow-y-scroll p-10 grid grid-cols-1 gap-10 gap-y-20"
-      >
-        <!-- Hero section -->
+      <p class="text-xl font-thin tracking-wider">MINTEX</p>
+    </div>
+    <!-- Middle scrollable section -->
+    <div class="content flex-1 px-4 md:px-40 pt-10 grid grid-cols-1 gap-10 gap-y-20">
+      <!-- Hero section -->
 
-        <section
-          class="Hero-section flex items-center justify-center md:justify-start"
-          style="min-height: 90vh"
-        >
-          <div
-            class="col-span-1 w3-content w3-display-container h-full flex items-center"
-            style="max-width: unset; margin: unset"
-          >
-            <div
-              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-            >
-              <div
-                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
-              >
-                <h3
-                  class="uppercase hero-date flex items-center gap-4 font-thin"
-                >
-                  <p class="hidden md:block hero-date-line font-thin"></p>
-                  November 8 - 10
-                </h3>
-                <h1
-                  class="uppercase this text-center md:text-left hero-text md:text-start gradient-text"
-                >
-                  Mining and Technology Expo
-                </h1>
-                <div class="col-span-2 md:order-3 order-3">
-                  <button class="btn">Register</button>
-                </div>
-              </div>
-              <div
-                class="flex order-1 md:order-2 justify-center md:justify-end"
-              >
-                <img
-                  src="../assets/momlogo.png"
-                  class="self-center hero-image"
-                />
+      <section class="Hero-section flex items-center justify-center md:justify-start" style="min-height: 90vh">
+        <div class="col-span-1 w3-content w3-display-container h-full flex items-center"
+          style="max-width: unset; margin: unset">
+          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+            <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
+              <h3 class="uppercase hero-date flex items-center gap-4 font-thin">
+                <p class="hidden md:block hero-date-line font-thin"></p>
+                November 8 - 10
+              </h3>
+              <h1 class="uppercase this text-center md:text-left hero-text md:text-start gradient-text">
+                Mining and Technology Expo
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Register</button>
               </div>
             </div>
-
-            <div
-              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-            >
-              <div
-                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
-              >
-                <h3 class="uppercase hero-date flex items-center gap-4">
-                  <p class="hidden md:block hero-date-line"></p>
-                  November 8 - 10
-                </h3>
-                <h1
-                  class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
-                >
-                  The Biggest Mining Expo in Africa
-                </h1>
-                <div class="col-span-2 md:order-3 order-3">
-                  <button class="btn">Register</button>
-                </div>
-              </div>
-              <div
-                class="flex order-1 md:order-2 justify-center md:justify-end"
-              >
-                <img
-                  src="../assets/momlogo.png"
-                  class="self-center hero-image"
-                />
-              </div>
-            </div>
-            <div
-              class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center"
-            >
-              <div
-                class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4"
-              >
-                <h3 class="uppercase hero-date flex items-center gap-4">
-                  <p class="hidden md:block hero-date-line"></p>
-                  November 8 - 10
-                </h3>
-                <h1
-                  class="uppercase text-center md:text-left hero-text md:text-start gradient-text"
-                >
-                  Where The Future Technology be revealed
-                </h1>
-                <div class="col-span-2 md:order-3 order-3">
-                  <button class="btn">Register</button>
-                </div>
-              </div>
-              <div
-                class="flex order-1 md:order-2 justify-center md:justify-end"
-              >
-                <img
-                  src="../assets/momlogo.png"
-                  class="self-center hero-image"
-                />
-              </div>
-            </div>
-
-            <div
-              class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
-              style="width: 100%"
-            >
-              <span
-                class="slider-controller slider-controller-active"
-                onclick="currentDiv(1)"
-              ></span>
-              <span class="slider-controller" onclick="currentDiv(2)"></span>
-              <span class="slider-controller" onclick="currentDiv(3)"></span>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
             </div>
           </div>
-        </section>
 
-        <!-- Mintex is coming -->
-        <div class="mt-10" style="min-height: 90vh">
-          <h2
-            class="uppercase header-title gradient-text flex flex-col items-center mb-16"
-          >
-            <span>MINTEX IS COMING</span>
-            <p class="hor-line"></p>
-          </h2>
+          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+            <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
+              <h3 class="uppercase hero-date flex items-center gap-4">
+                <p class="hidden md:block hero-date-line"></p>
+                November 8 - 10
+              </h3>
+              <h1 class="uppercase text-center md:text-left hero-text md:text-start gradient-text">
+                The Biggest Mining Expo in Africa
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Register</button>
+              </div>
+            </div>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
+            </div>
+          </div>
+          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+            <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
+              <h3 class="uppercase hero-date flex items-center gap-4">
+                <p class="hidden md:block hero-date-line"></p>
+                November 8 - 10
+              </h3>
+              <h1 class="uppercase text-center md:text-left hero-text md:text-start gradient-text">
+                Where The Future Technology be revealed
+              </h1>
+              <div class="col-span-2 md:order-3 order-3">
+                <button class="btn">Register</button>
+              </div>
+            </div>
+            <div class="flex order-1 md:order-2 justify-center md:justify-end">
+              <img src="../assets/momlogo.png" class="self-center hero-image" />
+            </div>
+          </div>
 
-          <div class="relative">
-            <div
-              class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center"
-            >
-              <!-- Countdown -->
-              <div id="time-container" class="col-span-2 gap-5">
-                <!-- Days -->
-                <div
-                  class="time day relative overflow-hidden"
-                  style="background-color: #707070"
-                >
-                  <div class="half-circle day-half-circle"></div>
-                  <div class="half-circle day-half-circle"></div>
-                  <div class="half-circle-top day-half-circle-top"></div>
-                  <div class="z-10 inner-circle" style="background: #333">
-                    <p id="day"></p>
-                    <span>DAYS</span>
-                  </div>
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width: 100%">
+            <span class="slider-controller slider-controller-active" onclick="currentDiv(1)"></span>
+            <span class="slider-controller" onclick="currentDiv(2)"></span>
+            <span class="slider-controller" onclick="currentDiv(3)"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mintex is coming -->
+      <div class="mt-10" style="min-height: 90vh">
+        <h2 class="uppercase header-title gradient-text flex flex-col items-center mb-16">
+          <span>MINTEX IS COMING</span>
+          <p class="hor-line"></p>
+        </h2>
+
+        <div class="relative">
+          <div class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center">
+            <!-- Countdown -->
+            <div id="time-container" class="col-span-2 gap-5" data-aos="fade-right" data-aos-offset="0"
+              data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
+              data-aos-anchor-placement="top-center">
+              <!-- Days -->
+              <div class="time day relative overflow-hidden" style="background-color: #707070">
+                <div class="half-circle day-half-circle"></div>
+                <div class="half-circle day-half-circle"></div>
+                <div class="half-circle-top day-half-circle-top"></div>
+                <div class="z-10 inner-circle" style="background: #333">
+                  <p id="day"></p>
+                  <span>DAYS</span>
                 </div>
-                <div
-                  class="time day relative overflow-hidden"
-                  style="background-color: #707070"
-                >
-                  <div class="half-circle hour-half-circle"></div>
-                  <div class="half-circle hour-half-circle"></div>
-                  <div class="half-circle-top hour-half-circle-top"></div>
-                  <div class="z-10 inner-circle" style="background: #333">
-                    <p id="hour"></p>
-                    <span>Hours</span>
-                  </div>
+              </div>
+              <div class="time day relative overflow-hidden" style="background-color: #707070">
+                <div class="half-circle hour-half-circle"></div>
+                <div class="half-circle hour-half-circle"></div>
+                <div class="half-circle-top hour-half-circle-top"></div>
+                <div class="z-10 inner-circle" style="background: #333">
+                  <p id="hour"></p>
+                  <span>Hours</span>
                 </div>
-                <div
-                  class="time day relative overflow-hidden"
-                  style="background-color: #707070"
-                >
-                  <div class="half-circle minute-half-circle"></div>
-                  <div class="half-circle minute-half-circle"></div>
-                  <div class="half-circle-top minute-half-circle-top"></div>
-                  <div class="z-10 inner-circle" style="background: #333">
-                    <p id="minute"></p>
-                    <span>Minutes</span>
-                    <!-- <div><span class="text-sx" id="sec">0</span>s</div> -->
-                  </div>
+              </div>
+              <div class="time day relative overflow-hidden" style="background-color: #707070">
+                <div class="half-circle minute-half-circle"></div>
+                <div class="half-circle minute-half-circle"></div>
+                <div class="half-circle-top minute-half-circle-top"></div>
+                <div class="z-10 inner-circle" style="background: #333">
+                  <p id="minute"></p>
+                  <span>Minutes</span>
+                  <!-- <div><span class="text-sx" id="sec">0</span>s</div> -->
                 </div>
-                <!-- Hour -->
-                <!-- <div class="time hour">
+              </div>
+              <!-- Hour -->
+              <!-- <div class="time hour">
                   <p id="hour"></p>
                   <span>Hours</span>
                 </div> -->
-                <!-- Minutes -->
-                <!-- <div class="time minute relativ">
+              <!-- Minutes -->
+              <!-- <div class="time minute relativ">
                   <p id="minute"></p>
                   <span>Minutes </span>
                 </div> -->
-              </div>
-              <div class="col-span-2" data-aos="">
-                <h3
-                  class="header-subtitle tracking-widest"
-                  style="font-weight: 200"
-                >
-                  LAUNCH
-                </h3>
-                <p style="font-weight: 100" class="paragraph my-5">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam recusandae sed aperiam corrupti reiciendis aut
-                  incidunt culpa possimus, temporibus, odio cum facere molestias
-                  fugit id corporis impedit.
-                </p>
-                <button class="btn" style="border-color: white; color: white">
-                  Register
-                </button>
-              </div>
-              <h3
-                class="hidden time-line-mintex absolute right-0 gradient-text"
-                style="
+            </div>
+            <div class="col-span-2" data-aos="fade-left" data-aos-offset="0" data-aos-delay="50"
+              data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
+              data-aos-anchor-placement="top-center">
+              <h3 class="header-subtitle tracking-widest" style="font-weight: 200">
+                LAUNCH
+              </h3>
+              <p style="font-weight: 100" class="paragraph my-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam recusandae sed aperiam corrupti reiciendis aut
+                incidunt culpa possimus, temporibus, odio cum facere molestias
+                fugit id corporis impedit.
+              </p>
+              <button class="btn" style="border-color: white; color: white">
+                Register
+              </button>
+            </div>
+            <h3 class="hidden time-line-mintex absolute right-0 gradient-text" style="
                   transform: rotate(90deg);
                   right: -200px;
                   margin: 0;
                   @media (min-width: ;);
-                "
-              >
-                MINTEX
-              </h3>
-              <div
-                class="col-span-2 uppercase header-paragraph mt-5 flex gap-10"
-                style="font-weight: 200; letter-spacing: 3px"
-              >
-                <p>
-                  Date <br />
-                  PLACE
-                </p>
-                <p>
-                  <span class="target-date uppercase"></span> <br />
-                  Mellinium Hall, Addis Ababa
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- About Mintex -->
-        <div>
-          <h2
-            class="uppercase header-title gradient-text flex flex-col items-center"
-          >
-            ABOUT MINTEX
-            <p class="hor-line"></p>
-          </h2>
-
-          <div class="flex flex-col xl:grid grid-cols-2">
-            <div class="my-5 flex justify-center xl:justify-start md:my-10">
-              <div class="relative">
-                <div id="play-pause" class="play-pause">
-                  <div id="play" class="cursor-pointer video-controls">
-                    <i class="fa-sharp fa-solid fa-play"></i>
-                  </div>
-                  <div id="pause" class="hidden cursor-pointer video-controls">
-                    <i class="fa-sharp fa-solid fa-pause"></i>
-                  </div>
-                </div>
-                <video
-                  id="video"
-                  class="video relative bg-blue-400 box-shadow-2xl"
-                >
-                  <source
-                    src="https://www.w3schools.com/html/mov_bbb.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-            </div>
-
-            <div class="col-span-1 m-auto">
-              <div class="about-scrollable overflow-y-scroll scrollbar-hidden">
-                <h3 class="font-bold mb-20 about-text">
-                  The Worlds largest mining event
-                </h3>
-                <h3 class="font-bold mb-20 about-text">
-                  The Worlds largest mining event
-                </h3>
-                <h3 class="font-bold mb-20 about-text">
-                  The Worlds largest mining event
-                </h3>
-                <h3 class="font-bold mb-20 about-text">
-                  Worlds largest mining event
-                </h3>
-              </div>
-              <p class="paragraph about-excerpt">
-                MINTEX is aiming to be Africa’s largest and most prominent
-                mining event, embracing the whole value chain of survey and
-                assessment, exploration and mining, technology and equipment,
-                investment and finance, trade and service, and more..png
+                ">
+              MINTEX
+            </h3>
+            <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+              data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
+              class="col-span-2 uppercase header-paragraph mt-5 flex gap-10"
+              style="font-weight: 200; letter-spacing: 3px">
+              <p>
+                Date <br />
+                PLACE
               </p>
-              <button class="btn mt-5">Learn more</button>
+              <p>
+                <span class="target-date uppercase"></span> <br />
+                Mellinium Hall, Addis Ababa
+              </p>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- JOIN US -->
-        <div>
-          <h3
-            class="uppercase flex flex-col md:flex-row items-center header-title gradient-text w-full"
-          >
-            Join Us
-            <p class="md:ml-10 hor-line flex-grow"></p>
-          </h3>
-          <div class="grid grid-cols-1 xl:grid-cols-2 py-10 items-center">
-            <div>
-              <div
-                class="grid grid-cols-2 mx-auto mb-5 grid-rows-2 join-us-card"
-              >
-                <div class="card-box">
-                  <h3>150</h3>
-                  <span>EXHIBITORS</span>
+      <!-- About Mintex -->
+      <div>
+        <h2 class="uppercase header-title gradient-text flex flex-col items-center">
+          ABOUT MINTEX
+          <p class="hor-line"></p>
+        </h2>
+
+        <div class="flex flex-col xl:grid grid-cols-2">
+          <div class="my-5 flex justify-center xl:justify-start md:my-10">
+            <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+              data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
+              class="relative">
+              <div id="play-pause" class="play-pause">
+                <div id="play" class="cursor-pointer video-controls">
+                  <i class="fa-sharp fa-solid fa-play"></i>
                 </div>
-                <div class="card-box">
-                  <h3 class="">90K+</h3>
-                  <span>VISITORS</span>
-                </div>
-                <div class="card-box">
-                  <h3>300</h3>
-                  <span>EXECUTIVES</span>
-                </div>
-                <div class="card-box">
-                  <h3>30</h3>
-                  <span>SPONSORS</span>
+                <div id="pause" class="hidden cursor-pointer video-controls">
+                  <i class="fa-sharp fa-solid fa-pause"></i>
                 </div>
               </div>
+              <video id="video" class="video relative bg-blue-400 box-shadow-2xl">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              </video>
             </div>
+          </div>
 
+          <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
+            class="col-span-1 m-auto">
             <div class="">
-              <h3
-                class="header-subtitle font-thin"
-                style="font-size: clamp(2rem, 4vw, 2.5rem)"
-              >
-                WHO IS COMING TO THIS YEAR'S MINTEX?
+              <h3 class="font-bold mb-20 about-text">
+                The Worlds largest mining event
               </h3>
-              <p class="paragraph my-5" style="font-weight: 100">
-                MINTEX is aiming to be Africa’s largest and most prominent
-                mining event, embracing the whole value chain of survey and
-                assessment, exploration and mining, technology and equipment,
-                investment and finance, trade and service, and more.
-              </p>
-              <button
-                class="btn mt-5"
-                style="color: white; border-color: white"
-              >
-                Register
-              </button>
+              <!-- <h3 class="font-bold mb-20 about-text">
+                The Worlds largest mining event
+              </h3>
+              <h3 class="font-bold mb-20 about-text">
+                The Worlds largest mining event
+              </h3> 
+              <h3 class="font-bold mb-20 about-text">
+                Worlds largest mining event
+              </h3>-->
             </div>
+            <p class="paragraph about-excerpt">
+              MINTEX is aiming to be Africa’s largest and most prominent
+              mining event, embracing the whole value chain of survey and
+              assessment, exploration and mining, technology and equipment,
+              investment and finance, trade and service, and more..png
+            </p>
+            <button class="btn mt-5">Learn more</button>
           </div>
         </div>
+      </div>
 
-        <!-- TIMELINE -->
-        <div class="">
-          <h2
-            class="uppercase header-title gradient-text flex flex-col items-center mb-20"
-          >
-            Program Schedule
-            <p class="hor-line"></p>
-          </h2>
-          <div class="">
-            <!-- TimeLine 1 -->
-            <div class="flex justify-evenly time-line-card-container">
-              <!-- CARD -->
-              <div class="time-line-card mt-10" style="width: 49%">
-                <p class="time-line-time">9:00 - 12:00</p>
-                <p class="time-line-date font-bold">12 Nov 2022</p>
-                <img
-                  class="time-line-card-image"
-                  src="../assets/images/EngineerTakele.jpg"
-                  alt=""
-                />
-                <p class="time-line-image-header">Speech Session</p>
+      <!-- JOIN US -->
+      <div>
+        <h3 class="uppercase flex flex-col md:flex-row items-center header-title gradient-text w-full">
+          Join Us
+          <p class="md:ml-10 hor-line flex-grow"></p>
+        </h3>
+        <div class="grid grid-cols-1 xl:grid-cols-2 py-10 items-center">
+          <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center">
+            <div class="grid grid-cols-2 mx-auto mb-5 grid-rows-2 join-us-card">
+              <div class="card-box ">
+                <h3>150</h3>
+                <span>EXHIBITORS</span>
               </div>
-              <!-- LINE -->
-              <div class="flex flex-col items-center overflow-x-hidden">
-                <div class="circle"></div>
-                <div class="line"></div>
+              <div class="card-box">
+                <h3 class="">90K+</h3>
+                <span>VISITORS</span>
               </div>
-              <!-- TEXT -->
-              <div class="flex items-center" style="width: 49%">
-                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+              <div class="card-box">
+                <h3>300</h3>
+                <span>EXECUTIVES</span>
               </div>
-            </div>
-            <!-- TimeLine 2-->
-            <div
-              class="flex flex-row-reverse justify-evenly time-line-card-container"
-            >
-              <!-- CARD -->
-              <div
-                class="time-line-card mt-20"
-                style="width: 49%; align-items: start"
-              >
-                <p class="time-line-time">9:00 - 12:00</p>
-                <p class="time-line-date font-bold">12 Nov 2022</p>
-                <img
-                  class="time-line-card-image"
-                  src="https://images.unsplash.com/photo-1600320844678-43cebba1cdfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-                <p class="time-line-image-header">Speech Session</p>
-              </div>
-              <!-- LINE -->
-              <div class="flex flex-col items-center">
-                <div class="circle"></div>
-                <div class="line"></div>
-              </div>
-              <!-- TEXT -->
-              <div class="flex items-center justify-end" style="width: 49%">
-                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
-              </div>
-            </div>
-            <!-- TimeLine 3 -->
-            <div class="flex justify-evenly time-line-card-container">
-              <!-- CARD -->
-              <div class="time-line-card mt-10" style="width: 49%">
-                <p class="time-line-time">9:00 - 12:00</p>
-                <p class="time-line-date font-bold">12 Nov 2022</p>
-                <img
-                  class="time-line-card-image"
-                  src="../assets/images/Takele.jpg"
-                  alt=""
-                />
-                <p class="time-line-image-header">Speech Session</p>
-              </div>
-              <!-- LINE -->
-              <div class="flex flex-col items-center">
-                <div class="circle"></div>
-                <div class="line"></div>
-              </div>
-              <!-- TEXT -->
-              <div class="flex items-center" style="width: 49%">
-                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
-              </div>
-            </div>
-            <!-- TimeLine 4-->
-            <div
-              class="flex flex-row-reverse justify-evenly time-line-card-container"
-            >
-              <!-- CARD -->
-              <div
-                class="time-line-card mt-20"
-                style="width: 49%; align-items: start"
-              >
-                <p class="time-line-time">9:00 - 12:00</p>
-                <p class="time-line-date font-bold">12 Nov 2022</p>
-                <img
-                  class="time-line-card-image"
-                  src="../assets/images/Takele.jpg"
-                  alt=""
-                />
-                <p class="time-line-image-header">Speech Session</p>
-              </div>
-              <!-- LINE -->
-              <div class="flex flex-col items-center">
-                <div class="circle"></div>
-                <div class="line"></div>
-              </div>
-              <!-- TEXT -->
-              <div class="flex items-center justify-end" style="width: 49%">
-                <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+              <div class="card-box">
+                <h3>30</h3>
+                <span>SPONSORS</span>
               </div>
             </div>
           </div>
+
+          <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center" class="">
+            <h3 class="header-subtitle font-thin" style="font-size: clamp(2rem, 4vw, 2.5rem)">
+              WHO IS COMING TO THIS YEAR'S MINTEX?
+            </h3>
+            <p class="paragraph my-5" style="font-weight: 100">
+              MINTEX is aiming to be Africa’s largest and most prominent
+              mining event, embracing the whole value chain of survey and
+              assessment, exploration and mining, technology and equipment,
+              investment and finance, trade and service, and more.
+            </p>
+            <button class="btn mt-5" style="color: white; border-color: white">
+              Register
+            </button>
+          </div>
         </div>
-        <!-- SPONSORS -->
-        <div class="flex flex-col">
-          <h2
-            class="uppercase header-title gradient-text flex flex-col items-center"
-          >
-            SPONSORS
-            <p class="hor-line"></p>
-          </h2>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="">
+        <h2 class="uppercase header-title gradient-text flex flex-col items-center mb-20">
+          Program Schedule
+          <p class="hor-line"></p>
+        </h2>
+        <div class="">
+          <!-- TimeLine 1 -->
+          <div class="flex justify-evenly time-line-card-container">
+            <!-- CARD -->
+            <div class="time-line-card mt-10" style="width: 49%">
+              <p class="time-line-time">9:00 - 12:00</p>
+              <p class="time-line-date font-bold">12 Nov 2022</p>
+              <img data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-bottom"
+                class="time-line-card-image" src="../assets/images/EngineerTakele.jpg" alt="" />
+              <p class="time-line-image-header">Speech Session</p>
+            </div>
+            <!-- LINE -->
+            <div class="flex flex-col items-center overflow-x-hidden">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <!-- TEXT -->
+            <div class="flex items-center" style="width: 49%">
+              <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+            </div>
+          </div>
+          <!-- TimeLine 2-->
+          <div class="flex flex-row-reverse justify-evenly time-line-card-container">
+            <!-- CARD -->
+            <div class="time-line-card mt-20" style="width: 49%; align-items: start">
+              <p class="time-line-time">9:00 - 12:00</p>
+              <p class="time-line-date font-bold">12 Nov 2022</p>
+              <img class="time-line-card-image" data-aos="fade-left" data-aos-offset="0" data-aos-delay="50"
+                data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+                src="https://images.unsplash.com/photo-1600320844678-43cebba1cdfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29uZmVyZW5jZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="" />
+              <p class="time-line-image-header">Speech Session</p>
+            </div>
+            <!-- LINE -->
+            <div class="flex flex-col items-center">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <!-- TEXT -->
+            <div class="flex items-center justify-end" style="width: 49%">
+              <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+            </div>
+          </div>
+          <!-- TimeLine 3 -->
+          <div class="flex justify-evenly time-line-card-container">
+            <!-- CARD -->
+            <div class="time-line-card mt-10" style="width: 49%">
+              <p class="time-line-time">9:00 - 12:00</p>
+              <p class="time-line-date font-bold">12 Nov 2022</p>
+              <img data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
+                class="time-line-card-image" src="../assets/images/Takele.jpg" alt="" />
+              <p class="time-line-image-header">Speech Session</p>
+            </div>
+            <!-- LINE -->
+            <div class="flex flex-col items-center">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <!-- TEXT -->
+            <div class="flex items-center" style="width: 49%">
+              <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+            </div>
+          </div>
+          <!-- TimeLine 4-->
+          <div class="flex flex-row-reverse justify-evenly time-line-card-container">
+            <!-- CARD -->
+            <div class="time-line-card mt-20" style="width: 49%; align-items: start">
+              <p class="time-line-time">9:00 - 12:00</p>
+              <p class="time-line-date font-bold">12 Nov 2022</p>
+              <img data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
+                class="time-line-card-image" src="../assets/images/Takele.jpg" alt="" />
+              <p class="time-line-image-header">Speech Session</p>
+            </div>
+            <!-- LINE -->
+            <div class="flex flex-col items-center">
+              <div class="circle"></div>
+              <div class="line"></div>
+            </div>
+            <!-- TEXT -->
+            <div class="flex items-center justify-end" style="width: 49%">
+              <h3 class="time-line-mintex mt-20 gradient-text">MINTEX</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- SPONSORS -->
+      <div class="flex flex-col">
+        <h2 class="uppercase header-title gradient-text flex flex-col items-center">
+          SPONSORS
+          <p class="hor-line"></p>
+        </h2>
+        <div data-aos="fade-up" data-aos-offset="0" data-aos-duration="1000" data-aos-once="false"
+          data-aos-anchor-placement="top-bottom">
           <p class="uppercase my-5 header-subtitle text-center">
             Proudly partnerd with
           </p>
-          <p
-            class="paragraph md:text-center mb-20 font-thin self-center text-center"
-          >
+          <p class="paragraph md:text-center mb-20 font-thin self-center text-center">
             Working alongside Our clients and partners, we funnel our
             creativity, energy, and thought to every brand that will reflect our
             mulutal success. Working alongside Our clients and partners, we
             funnel our creativity, energy, and thought to every brand that wi
           </p>
-          <div
-            class="icons grid grid-cols-4 md:grid-cols-6 items-center justify-center gap-10"
-          >
-            <img src="../assets/icons/apple.png" alt="" />
-            <img src="../assets/icons/dropbox.png" alt="" />
-            <img src="../assets/icons/bitcoin.png" alt="" />
-            <img src="../assets/icons/sass.png" alt="" />
-            <img src="../assets/icons/apple.png" alt="" />
-            <img src="../assets/icons/bitcoin.png" alt="" />
-            <img src="../assets/icons/apple.png" alt="" />
-            <img src="../assets/icons/dropbox.png" alt="" />
-            <img src="../assets/icons/sass.png" alt="" />
-            <img src="../assets/icons/bitcoin.png" alt="" />
-            <img src="../assets/icons/apple.png" alt="" />
-            <img src="../assets/icons/dropbox.png" alt="" />
-          </div>
         </div>
 
-        <footer class="footer">
-          <img
-            class="h-screen object-cover"
-            src="../assets/images/footer-img.png"
-            alt=""
-          />
-          <div class="overlay">
-            <p class="footer-heading mb-5">
-              BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR
-            </p>
+        <div class="icons grid grid-cols-4 md:grid-cols-6 items-center justify-center gap-10">
+          <img data-aos="flip-left" data-aos-delay="200" src="../assets/icons/apple.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="500" src="../assets/icons/dropbox.png" alt="" />
+          <img data-aos="flip-left" data-aos-delay="800" src="../assets/icons/bitcoin.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="1100" src="../assets/icons/sass.png" alt="" />
+          <img data-aos="flip-left" data-aos-delay="1400" src="../assets/icons/bitcoin.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="1700" src="../assets/icons/bitcoin.png" alt="" />
+          <img data-aos="flip-left" data-aos-delay="200" src="../assets/icons/apple.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="500" src="../assets/icons/dropbox.png" alt="" />
+          <img data-aos="flip-left" data-aos-delay="800" src="../assets/icons/sass.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="1100" src="../assets/icons/bitcoin.png" alt="" />
+          <img data-aos="flip-left" data-aos-delay="1400" src="../assets/icons/bitcoin.png" alt="" />
+          <img data-aos="flip-right" data-aos-delay="1700" src="../assets/icons/dropbox.png" alt="" />
+        </div>
+      </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2">
-              <div
-                class="col-span-1 flex flex-col items-center justify-center p-5"
-              >
-                <h2 class="uppercase font-bold header-title">Get in touch</h2>
-                <div class="flex text-xl gap-2 items-center">
-                  <p>Email:</p>
-                  <p class="">some@mail.com</p>
-                </div>
-                <div class="flex text-xl gap-2 items-center">
-                  <p>Phone:</p>
-                  <p class="">+123456789</p>
-                </div>
+      <footer class="footer">
+        <img class="h-screen object-cover" src="../assets/images/footer-img.png" alt="" />
+        <div class="overlay">
+          <p class="footer-heading mb-5">
+            BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR
+          </p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="col-span-1 flex flex-col items-center justify-center p-5">
+              <h2 class="uppercase font-bold header-title">Get in touch</h2>
+              <div class="flex text-xl gap-2 items-center">
+                <p>Email:</p>
+                <p class="">some@mail.com</p>
               </div>
-              <div class="gap-3 contact-us p-5 col-span-1">
-                <input
-                  class="input mb-5"
-                  id="email"
-                  type="email"
-                  placeholder="Enter your email"
-                />
-
-                <input
-                  class="input mb-5"
-                  id="name"
-                  type="text"
-                  placeholder="Enter your name"
-                />
-
-                <textarea
-                  name="message"
-                  class="input mb-5 text-area"
-                  id="message"
-                  cols=""
-                  rows="40"
-                ></textarea>
-
-                <button class="btn">Send mail</button>
+              <div class="flex text-xl gap-2 items-center">
+                <p>Phone:</p>
+                <p class="">+123456789</p>
               </div>
             </div>
-          </div>
-        </footer>
-      </div>
-      <!-- left side menu -->
-      <div
-        class="hidden h-screen py-3 px-5 gap-5 pb-40 md:flex justify-between flex-col"
-      >
-        <div id="menu" class="menu">
-          <p id="menu-item-1"></p>
-          <p id="menu-item-2"></p>
-          <p id="menu-item-3"></p>
-        </div>
+            <div class="gap-3 contact-us p-5 col-span-1">
+              <input class="input mb-5" id="email" type="email" placeholder="Enter your email" />
 
-        <div class="flex-1 flex-col flex items-center">
-          <p
-            class="flex-1 my-3"
-            style="width: 1px; background-color: rgba(253, 253, 253, 0.6)"
-          ></p>
-          <p class="scroll-down my-5">scroll</p>
-          <p
-            class="bg-white flex-1 gap-0 flex items-end justify-center"
-            style="width: 1px; background-color: rgba(253, 253, 253, 0.6)"
-          >
-            <i
-              class="fa-solid fa-arrow-down text-white font-thin"
-              style="color: rgba(255, 255, 255, 0.6)"
-            ></i>
-          </p>
+              <input class="input mb-5" id="name" type="text" placeholder="Enter your name" />
+
+              <textarea name="message" class="input mb-5 text-area" id="message" cols="" rows="40"></textarea>
+
+              <button class="btn">Send mail</button>
+            </div>
+          </div>
         </div>
+      </footer>
+    </div>
+    <!-- left side menu -->
+    <div class="hidden h-screen py-3 px-5 gap-5 pb-40  fixed right-0 md:flex justify-between flex-col">
+      <div id="menu" class="menu">
+        <p id="menu-item-1"></p>
+        <p id="menu-item-2"></p>
+        <p id="menu-item-3"></p>
+      </div>
+
+      <div class="flex-1 flex-col flex items-center">
+        <p class="flex-1 my-3" style="width: 1px; background-color: rgba(253, 253, 253, 0.6)"></p>
+        <p class="scroll-down my-5">scroll</p>
+        <p class="bg-white flex-1 gap-0 flex items-end justify-center"
+          style="width: 1px; background-color: rgba(253, 253, 253, 0.6)">
+          <i class="fa-solid fa-arrow-down text-white font-thin" style="color: rgba(255, 255, 255, 0.6)"></i>
+        </p>
       </div>
     </div>
-  </body>
-  <script src="./index.js"></script>
+  </div>
+  <script>
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
+</body>
+<script src="./index.js"></script>
+
 </html>
