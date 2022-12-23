@@ -79,13 +79,14 @@
       <p class="text-xl font-thin tracking-wider">MINTEX</p>
     </div>
     <!-- Middle scrollable section -->
-    <div class="content flex-1 px-4 md:px-40 pt-10 grid grid-cols-1 gap-10 gap-y-20">
+    <div class="relative content flex-1 px-4 md:px-40 md:pt-10 grid grid-cols-1 gap-10 gap-y-5">
       <!-- Hero section -->
-
-      <section class="Hero-section flex items-center justify-center md:justify-start" style="min-height: 90vh">
-        <div class="carousel col-span-1 w3-content w3-display-container h-full flex items-center"
+    
+      <section class="Hero-section md:pt-20 md:absolute left-0 top-0 flex items-center justify-center md:justify-start"
+        style="min-height: 90vh">
+        <div class="carousel col-span-1 md:pl-32 w3-content w3-display-container h-full flex items-center"
           style="max-width: unset; margin: unset">
-          <div class="slides one mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides one  md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4 font-thin">
                 <p class="hidden md:block hero-date-line font-thin"></p>
@@ -103,7 +104,7 @@
             </div>
           </div>
 
-          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides two md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
@@ -120,7 +121,7 @@
               <img src="../assets/momlogo.png" class="self-center hero-image" />
             </div>
           </div>
-          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides three md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
@@ -146,6 +147,8 @@
           </div>
         </div>
       </section>
+
+      <div class="md:h-screen"></div>
 
       <!-- Mintex is coming -->
       <div class="mt-10" style="min-height: 90vh">
@@ -250,7 +253,7 @@
           <p class="hor-line"></p>
         </h2>
 
-        <div class="flex flex-col xl:grid grid-cols-2">
+        <div class="flex flex-col xl:grid grid-cols-2 pt-10 md:pt-0">
           <div class="my-5 flex justify-center xl:justify-start md:my-10">
             <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
               data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"

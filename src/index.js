@@ -201,3 +201,9 @@ function showDivs(n) {
 //   carosel.classList.remove("carousel");
 //   carosel.classList.add("carousel2");
 // }
+
+var count=0;
+window.setInterval(function () {
+  count+=1;
+  currentDiv(count%3);
+}, 4000);
