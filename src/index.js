@@ -10,7 +10,7 @@ const setDate = () => {
   const sDrray = new Date(globalStartDate).toDateString().split(" ");
   let endDate = new Date(globalEndDate).getDate().toString();
   let endDay = new Date(globalEndDate).toDateString().split(" ")[0];
-  console.log(endDate);
+  // console.log(endDate);
   endDate.length == 1 ? (endDate = "0" + endDate) : (endDate = endDate);
   for (let i = 0; i < dateElements.length; i++) {
     dateElements[i].innerText =
@@ -37,7 +37,7 @@ const play = document.getElementById("play");
 const pause = document.getElementById("pause");
 
 videoHandle.addEventListener("click", () => {
-  console.log("first");
+  // console.log("first");
   if (video.paused) {
     video.play();
     play.classList.add("hidden");

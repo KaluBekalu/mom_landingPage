@@ -90,14 +90,15 @@ body {
   /* font-size: clamp(14px, 3vw, 29px); */
   font-size: clamp(14px, 1.4vw, 16px);
   border-radius: 5px;
-  transition: all 0.33s;
+  transition: all 0.25s;
 
   color: #e3b97a;
 }
 .btn:hover {
   border: 1px solid #857152;
-  background: #857152;
+  background: -webkit-linear-gradient(0deg, #7e5936, #d5a45a);
   color: #fff;
+  transition: all 0.25s;
 }
 
 .hero-text {
