@@ -83,9 +83,9 @@
       <!-- Hero section -->
 
       <section class="Hero-section flex items-center justify-center md:justify-start" style="min-height: 90vh">
-        <div class="col-span-1 w3-content w3-display-container h-full flex items-center"
+        <div class="carousel col-span-1 w3-content w3-display-container h-full flex items-center"
           style="max-width: unset; margin: unset">
-          <div class="slides mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides one mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4 font-thin">
                 <p class="hidden md:block hero-date-line font-thin"></p>
@@ -155,7 +155,7 @@
         </h2>
 
         <div class="relative">
-          <div class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center overflow-x-hidden">
+          <div class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center ">
             <!-- Countdown -->
             <div id="time-container" class="col-span-2 gap-5" data-aos="fade-right" data-aos-offset="0"
               data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
@@ -200,10 +200,10 @@
                   <span>Minutes </span>
                 </div> -->
             </div>
-            <div class="col-span-2 " data-aos="fade-left" data-aos-offset="0" data-aos-delay="50"
+          <div class="overflow-x-hidden col-span-2"> <div  data-aos="fade-left" data-aos-offset="0" data-aos-delay="50"
               data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
               data-aos-anchor-placement="top-center" style="overflow-x:hidden ;">
-              <h3 class="header-subtitle tracking-widest overflow-x-hidden" style="font-weight: 200">
+              <h3 class="header-subtitle tracking-widest" style="font-weight: 200">
                 LAUNCH
               </h3>
               <p style="font-weight: 100" class="paragraph my-5">
@@ -215,7 +215,9 @@
               <button class="btn" style="border-color: white; color: white">
                 Register
               </button>
-            </div>
+            </div></div>
+
+           
             <h3 class="hidden time-line-mintex absolute right-0 gradient-text" style="
                   transform: rotate(90deg);
                   right: -200px;
@@ -248,7 +250,7 @@
           <p class="hor-line"></p>
         </h2>
 
-        <div class="flex flex-col xl:grid grid-cols-2 overflow-x-hidden">
+        <div class="flex flex-col xl:grid grid-cols-2">
           <div class="my-5 flex justify-center xl:justify-start md:my-10">
             <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
               data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
@@ -266,10 +268,10 @@
               </video>
             </div>
           </div>
-
-          <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+          <div class="overflow-x-hidden col-span-1"> 
+            <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
-            class="col-span-1 m-auto overflow-x-hidden">
+            class=" m-auto">
             <div class="">
               <h3 class="font-bold mb-20 about-text">
                 The Worlds largest mining event
@@ -292,6 +294,9 @@
             </p>
             <button class="btn mt-5">Learn more</button>
           </div>
+        </div>
+
+         
         </div>
       </div>
 
