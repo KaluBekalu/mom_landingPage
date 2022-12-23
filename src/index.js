@@ -169,6 +169,7 @@ function plusDivs(n) {
 
 function currentDiv(n) {
   showDivs((slideIndex = n));
+  // changeHeroBg();
 }
 
 function showDivs(n) {
@@ -193,3 +194,16 @@ function showDivs(n) {
   x[slideIndex - 1].style.display = "grid";
   dots[slideIndex - 1].className += " slider-controller-active";
 }
+
+// function changeHeroBg(){
+//   var carosel = document.getElementById("carousel");
+//   console.log(carosel);
+//   carosel.classList.remove("carousel");
+//   carosel.classList.add("carousel2");
+// }
+
+var count=0;
+window.setInterval(function () {
+  count+=1;
+  currentDiv(count%3);
+}, 4000);
