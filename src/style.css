@@ -522,16 +522,33 @@ body {
   height: 200px;
 }
 .carousel .one{
-  background-image: url(https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973__340.jpg);
+  background-image: linear-gradient(to bottom,
+    rgba(51, 51, 51, 0.321),
+    rgba(51, 51, 51, 0.566),
+    rgba(51, 51, 51, 0.666),
+    rgba(51, 51, 51, 0.856),
+    #333),url(https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973__340.jpg);
   background-size: 100% 100%;
 }
 
 .carousel .two {
-  background-image: url(https://cdn.pixabay.com/photo/2018/05/30/00/24/thunderstorm-3440450__340.jpg);
+  background-image: linear-gradient(to bottom,rgba(51, 51, 51, 0.321),
+    rgba(51, 51, 51, 0.566),rgba(51, 51, 51, 0.666),
+    rgba(51, 51, 51, 0.856),
+    #333),url(https://cdn.pixabay.com/photo/2018/05/30/00/24/thunderstorm-3440450__340.jpg);
+ 
   background-size: 100% 100%;
 }
 
 .carousel .three{
-  background-image: url(https://images.unsplash.com/photo-1585383234137-2367d3c5302d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.321),
+    rgba(51, 51, 51, 0.566),rgba(51, 51, 51, 0.666),
+    rgba(51, 51, 51, 0.856),
+    #333),url(https://images.unsplash.com/photo-1585383234137-2367d3c5302d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+ 
   background-size: 100% 100%;
+}
+
+.carouselSlder{
+  /* bottom: 100px; */
 }
