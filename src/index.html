@@ -69,7 +69,7 @@
   </script>
   <div class="flex container text-white">
     <!-- right side static -->
-    <div class="hidden h-screen p-5 fixed left-0 md:flex flex-col items-center justify-between pb-20">
+    <div class="hidden h-screen p-5 fixed left-0 md:flex flex-col items-center justify-between pb-20 z-10">
       <img src="../assets/momlogo.png" class="w-20" />
       <div class="social-icons" style="font-size: 16px">
         <i class="fa-brands fa-facebook-f"></i>
@@ -79,14 +79,14 @@
       <p class="text-xl font-thin tracking-wider">MINTEX</p>
     </div>
     <!-- Middle scrollable section -->
-    <div class="relative content flex-1 px-4 md:px-40 md:pt-10 grid grid-cols-1 gap-10 gap-y-5">
+    <div class="content flex-1 grid grid-cols-1 gap-10 gap-y-5">
       <!-- Hero section -->
     
-      <section class="Hero-section md:pt-20 md:absolute left-0 top-0 flex items-center justify-center md:justify-start"
-        style="min-height: 90vh">
-        <div class="carousel col-span-1 md:pl-32 w3-content w3-display-container h-full flex items-center"
+      <section class="Hero-section flex justify-center md:justify-start"
+        style="min-height: 100vh">
+        <div class="relative carousel col-span-1 w3-content w3-display-container h-full flex "
           style="max-width: unset; margin: unset">
-          <div class="slides one  md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides one md:px-32  mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4 font-thin">
                 <p class="hidden md:block hero-date-line font-thin"></p>
@@ -104,7 +104,7 @@
             </div>
           </div>
 
-          <div class="slides two md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides two  md:px-32 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
@@ -121,7 +121,7 @@
               <img src="../assets/momlogo.png" class="self-center hero-image" />
             </div>
           </div>
-          <div class="slides three md:pl-10 mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
+          <div class="slides three md:px-32  mb-20 hero flex flex-col items-center mb-10 md:grid md:grid-cols-2 gap-4 items-center">
             <div class="flex order-2 md:order-1 flex-col items-center md:items-start gap-4">
               <h3 class="uppercase hero-date flex items-center gap-4">
                 <p class="hidden md:block hero-date-line"></p>
@@ -139,7 +139,7 @@
             </div>
           </div>
 
-          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+          <div class="carouselSlder w3-center w3-container w3-section w3-large w3-text-white w3-display-bottom absolute bottom-0 left-10 "
             style="width: 100%">
             <span class="slider-controller slider-controller-active" onclick="currentDiv(1)"></span>
             <span class="slider-controller" onclick="currentDiv(2)"></span>
@@ -148,17 +148,15 @@
         </div>
       </section>
 
-      <div class="md:h-screen"></div>
-
       <!-- Mintex is coming -->
-      <div class="mt-10" style="min-height: 90vh">
+      <div class="mt-10 md:mx-40" style="min-height: 90vh">
         <h2 class="uppercase header-title gradient-text flex flex-col items-center mb-16">
           <span>MINTEX IS COMING</span>
           <p class="hor-line"></p>
         </h2>
 
         <div class="relative">
-          <div class="flex flex-col xl:grid grid-cols-4 gap-x-40 justify-between items-center ">
+          <div class="flex flex-col  p-10 md:p-0 xl:grid grid-cols-4 gap-x-40 justify-between items-center ">
             <!-- Countdown -->
             <div id="time-container" class="col-span-2 gap-5" data-aos="fade-right" data-aos-offset="0"
               data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="false"
@@ -231,23 +229,21 @@
             </h3>
             <div data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
               data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
-              class="col-span-2 uppercase header-paragraph mt-5 flex gap-10"
+              class="col-span-2 uppercase header-paragraph mt-5 flex flex-col gap-4 sm:text-lg text-base"
               style="font-weight: 200; letter-spacing: 3px">
-              <p>
-                Date <br />
-                PLACE
-              </p>
-              <p>
-                <span class="target-date uppercase"></span> <br />
-                Mellinium Hall, Addis Ababa
-              </p>
+              <div id="date" class="flex">
+                <span>Date :</span> &nbsp<span class="target-date "></span>
+              </div>
+              <div id="place" class="flex">
+               <span>Place </span> <span>: Mellinium Hall, Addis Ababa</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- About Mintex -->
-      <div>
+      <div class="md:mx-40">
         <h2 class="uppercase header-title gradient-text flex flex-col items-center">
           ABOUT MINTEX
           <p class="hor-line"></p>
@@ -271,7 +267,7 @@
               </video>
             </div>
           </div>
-          <div class="overflow-x-hidden col-span-1"> 
+          <div class="overflow-x-hidden col-span-1  p-10 md:p-0"> 
             <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
             data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center"
             class=" m-auto">
@@ -304,7 +300,7 @@
       </div>
 
       <!-- JOIN US -->
-      <div>
+      <div class="md:mx-40">
         <h3 class="uppercase flex flex-col md:flex-row items-center header-title gradient-text w-full">
           Join Us
           <p class="md:ml-10 hor-line flex-grow"></p>
@@ -333,7 +329,7 @@
           </div>
 
           <div data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
-            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center" class="overflow-x-hidden">
+            data-aos-easing="ease-in-out" data-aos-once="false" data-aos-anchor-placement="top-center" class="overflow-x-hidden  p-10 md:p-0">
             <h3 class="header-subtitle font-thin" style="font-size: clamp(2rem, 4vw, 2.5rem)">
               WHO IS COMING TO THIS YEAR'S MINTEX?
             </h3>
@@ -356,7 +352,7 @@
           Program Schedule
           <p class="hor-line"></p>
         </h2>
-        <div class="">
+        <div class="overflow-x-hidden md:overflow-x-visible">
           <!-- TimeLine 1 -->
           <div class="flex justify-evenly time-line-card-container">
             <!-- CARD -->
@@ -381,7 +377,7 @@
           <!-- TimeLine 2-->
           <div class="flex flex-row-reverse justify-evenly time-line-card-container">
             <!-- CARD -->
-            <div class="time-line-card mt-20 overflow-x-hidden" style="width: 49%; align-items: start">
+            <div class="time-line-card mt-20 " style="width: 49%; align-items: start">
               <p class="time-line-time">9:00 - 12:00</p>
               <p class="time-line-date font-bold">12 Nov 2022</p>
               <img class="time-line-card-image overflow-x-hidden" data-aos="fade-left" data-aos-offset="0" data-aos-delay="50"
@@ -425,7 +421,7 @@
           <!-- TimeLine 4-->
           <div class="flex flex-row-reverse justify-evenly time-line-card-container">
             <!-- CARD -->
-            <div class="time-line-card mt-20 overflow-x-hidden" style="width: 49%; align-items: start">
+            <div class="time-line-card mt-20" style="width: 49%; align-items: start">
               <p class="time-line-time">9:00 - 12:00</p>
               <p class="time-line-date font-bold">12 Nov 2022</p>
               <img data-aos="fade-left" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
@@ -446,7 +442,7 @@
         </div>
       </div>
       <!-- SPONSORS -->
-      <div class="flex flex-col">
+      <div class="flex flex-col  p-5 md:p-32">
         <h2 class="uppercase header-title gradient-text flex flex-col items-center">
           SPONSORS
           <p class="hor-line"></p>
@@ -482,7 +478,7 @@
 
       <footer class="footer">
         <img class="h-screen object-cover" src="../assets/images/footer-img.png" alt="" />
-        <div class="overlay">
+        <div class="overlay  p-5 md:p-32">
           <p class="footer-heading mb-5">
             BE PART OF THE MOST ANTICIPATED MINING EXPO OF THE YEAR
           </p>
