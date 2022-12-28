@@ -2,8 +2,8 @@
 
 // NOTE - If you update this the change is going to
 // reflect every where [Use the correct date format]
-const globalStartDate = "Jun 1, 2023";
-const globalEndDate = "Jun 3, 2023";
+const globalStartDate = "Nov 4, 2023";
+const globalEndDate = "Nov 10, 2023";
 const dateElements = document.getElementsByClassName("target-date");
 
 const setDate = () => {
